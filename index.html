@@ -1,68 +1,161 @@
 <html lang="en">
     
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  
+  <title>EPICLab</title>
+  
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom styles for this template -->
+  <link href="css/full-width-pics.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-    <title>EPICLab</title>
-    
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Custom styles for this template -->
-    <link href="css/full-width-pics.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="https://epiclab.github.io/">EPICLab</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="https://epiclab.github.io/">Home<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="people.html">People</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="research.html">Research</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="publications.html">Publications</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <!-- Styles -->
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-      <br> <br> <br> 
-      <!-- Content section -->
+    .wrapper {
+      flex: 1;
+    }
+
+    /* Add a new style for the footer */
+    .footer {
+      background-color: #343a40; /* Use the desired background color */
+      color: #ffffff; /* Use the desired text color */
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact-info {
+      text-align: right;
+      color: #999999; /* Slightly darker color for the address */
+      font-size: 0.9em; /* Smaller font size for the address */
+      margin-bottom: 5px; /* Adjust the margin bottom as needed */
+      line-height: 0.7; /* Adjust the line-height to reduce spacing between lines */
+    }
+  </style>
+
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="https://epiclab.github.io/">EPICLab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://epiclab.github.io/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="people.html">People</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="research.html">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="publications.html">Publications</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <br> <br> 
+
+  <!-- Banner Section -->
+  <div class="container-fluid p-0">
+    <img src="/epiclab.github.io/epiclab_banner.png" class="img-fluid" style="width: 100%; height: auto;">
+  </div>
+
+  <!-- Content section -->
+  <title>Three-column Layout</title>
+  <style>
+      .split {
+          display: flex;
+      }
+
+      .split-left,
+      .split-middle,
+      .split-right {
+          flex: 1;
+          padding: 20px;
+          text-align: center;
+      }
+
+      .split-left {
+          background-color: #f2f2f2;
+      }
+
+      .split-middle {
+          background-color: #e6e6e6;
+      }
+
+      .split-right {
+          background-color: #d9d9d9;
+      }
+
+              h2 {
+        font-size: 1.5em; /* Adjust the heading size */
+        font-weight: bold; /* Make the heading bold */
+    }
+
+    .lead {
+        font-size: 1.0em; /* Adjust the paragraph size */
+    }
+  </style>
+
+  <!-- Columns -->
+  </head>
+  <body>
     <section class="split">
         <div class="split-left">
-          <h2>Dr. Anita Sarma's research group at Oregon State University</h2>
-          <p class="lead"><br>EPICLabs stands for End-user centric, Privacy, Inclusion and Cognition.
-            Our work follows an interdisciplinary approach of performing empirical user studies 
-            to understand the problems and barriers that developers currently face, 
-            designing and developing interactive tools to make developers and teams more efficient, and 
-            formative and summative user studies to evaluate the benefits of the tools.  Our research approach 
-            is interdisciplinary, leveraging research in data mining, program analysis, software design, 
-            software visualization, and human-computer interaction. </p>
+            <h2>Mission</h2>
+            <p class="lead"><br><strong>EPICLabs</strong> stands for <strong></strong>End user-centric, Productivity, Inclusion and Cognition.
+                Our work follows an interdisciplinary approach of performing empirical user studies 
+                to understand the problems and barriers that developers currently face, 
+                designing and developing interactive tools to make developers and teams more efficient, and 
+                formative and summative user studies to evaluate the benefits of the tools. Our research approach 
+                is <strong>interdisciplinary, leveraging research in data mining, program analysis, software design, 
+                software visualization, and human-computer interaction.</strong></p>
         </div>
-    <!-- <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>EPICLab Website</h1>
-    <p>Test Description</p> -->
-</body>
+        <div class="split-middle">
+          <h2>Placeholder</h2>
+          <p class="lead"><br>What am I supposed to put here?</p>
+        </div>
 
+        <div class="split-right">
+          <h2>Placeholder</h2>
+          <p class="lead"><br>What am I supposed to put here?</p>
+        </div>
+      </section>
+
+    <!-- Footer -->
+  <div class="footer">
+      <div>
+          Copyright © Anita Sarma 2020
+      </div>
+      <div class="contact-info">
+          <p>Kelley Engineering Center</p>
+          <p>2500 NW Monroe Ave</p>
+          <p>Corvallis, OR 97331 USA</p>
+          <p>anita.sarma@oregonstate.edu</p>
+      </div>
+  </div>
+  </body>
 </html>
