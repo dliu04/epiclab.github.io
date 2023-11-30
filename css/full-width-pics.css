@@ -224,13 +224,13 @@ a:visited {
 ***** Home Page Split Screen *******
 
 /*desktop split screen*/
-.split {
+/* .split {
   display: flex;
   overflow: hidden;
-}
+} */
 
 /*desktop split left screen*/
-.split-left {
+/* .split-left {
   width: 50%;
   display: inline;
   padding-top: 50px;
@@ -240,20 +240,20 @@ a:visited {
   border-style: none;
   border-color: #343a40;
   border-width: 3px;
-}
+} */
 
 /*desktop split right screen*/
-.split-right {
+/* .split-right {
   width: 50%;
   padding-top: 50px;
   padding-right: 50px;
   padding-left: 25px;
   padding-bottom: 50px;
-}
+} */
 
 
 /*mobile display--no split screen*/
-@media (max-height: 700px), (max-width: 700px) {
+/* @media (max-height: 700px), (max-width: 700px) {
   .split {
   display: flex;
   flex-direction: column;
@@ -276,7 +276,7 @@ a:visited {
     padding-top: 20px;
     padding-left: 50px;
   }
-}
+} */
 
 
 
