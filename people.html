@@ -1,33 +1,104 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>EPICLab</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>EPICLab - People</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Custom styles for this template -->
   <link href="css/full-width-pics.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    .page-content {
+      padding-left: 7%; /* Adjust the left padding as a percentage */
+      padding-right: 7%; /* Adjust the right padding as a percentage */
+    }
+
+    .name-box {
+      text-align: center;
+      font-size: 18px; /* Adjust the font size as needed */
+    }
+
+    .name-box a.site-link {
+      font-size: 20px; /* Adjust the font size for the hyperlink as needed */
+    }
+
+    .name-box strong {
+      display: block;
+      font-size: 20px; /* Adjust the font size for emphasis as needed */
+    }
+
+    .page-headers {
+      font-size: 30px; /* Adjust the value as needed */
+    }
+    .people-container {
+      padding: 50px; 
+      text-align: center; /* Center the content within the container */
+      margin-top: -40px;
+    }
     
+    .profileimg {
+      width: 300px; /* Set a fixed width for the image */
+      height: 300px; /* Set a fixed height for the image */
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px; /* Add space below the profile image */
+      display: block; /* Ensure block-level display to center image */
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  </head>
+  
+    .people-position {
+      font-style: italic;
+      margin-top: 5px; /* Add space above the position */
+      margin-bottom: -10px; /*Remove some space below */
+    }
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    .page-headers {
+      padding-left: 40px; /* Adjust the value as needed */
+      margin-top: 10px; /* Adjust the space above the header */
+    }
 
-  <body>
+    /* Add a new style for the footer */
+    .footer {
+      background-color: #343a40; /* Use the desired background color */
+      color: #ffffff; /* Use the desired text color */
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    <div class="page-content">
+    .contact-info {
+      text-align: right;
+      color: #999999; /* Slightly darker color for the address */
+      font-size: 0.9em; /* Smaller font size for the address */
+      margin-bottom: 5px; /* Adjust the margin bottom as needed */
+      line-height: 0.7; /* Adjust the line-height to reduce spacing between lines */
+    }
+
+    .spacing {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-content">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -53,179 +124,196 @@
           </ul>
         </div>
       </div>
-    </nav> 
+    </nav>
 
     <!-- Content section -->
-    <!-- Faculty -->
-    <h3 class="page-headers">Faculty</h1>
+
+    <!-- Principle Investigator -->
+    <h3 class="page-headers">Principle Investigator</h3>
     <section class="curr-member-container">
-
-    
-
-    <section>
+      <!---Anita Sarma-->
       <div class="people-container">
-        <a href="http://web.engr.oregonstate.edu/~sarmaa/"><img src="https://github.com/asarma.png" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="sarma"></a>
-          <a class="site-link" ID="paper-link" href="http://web.engr.oregonstate.edu/~sarmaa/">Dr. Anita Sarma</a>
+        <img src="media/anita.jpg/" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="sarma"><a class="site-link" id="paper-link" href="http://web.engr.oregonstate.edu/~sarmaa/">Dr. Anita Sarma</a></p></strong>
           <p class="people-position">Professor, Oregon State University</p>
         </div>
       </div>
     </section>
-    </section>
 
-
-    <section>
-      <div class="people-container">
-        <a href="https://biancatrink.github.io"><img src="media/bianca_pic.jpeg" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="trinkenreich"></a>
-          <a class="site-link" ID="paper-link" href="https://biancatrink.github.io">Dr. Bianca Trinkenreich</a>
-          <p class="people-position">Postdoctoral Scholar, Oregon State University</p>
-        </div>
-      </div>
-    </section>
-    </section>
-
-    <!-- Current Graduate Students -->
-    <h3 class="page-headers">Current Graduate Students</h1>
+    <!-- Current Post-Doctoral Students -->
+    <h3 class="page-headers">Current Postdoctoral Students</h3>
     <section class="curr-member-container">
-
-
-
-    <section class="py-3">
-      <div class="people-container">
-        <a href="https://nomatic.dev/"><img src="https://github.com/nelsonni.png" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="nelson"></a>
-          <a class="site-link" ID="paper-link" href="https://nomatic.dev/">Nicholas Nelson</a>
-          <p class="people-position">PhD Candidate, Oregon State University</p>
+        <!---Bianca-->
+        <div class="people-container">
+          <img src="media/bianca_pic.jpeg" class="profileimg">
+          <div class="name-box" id="profile-text">
+            <strong><p class="people-link" id="trinkenreich">Dr. Bianca Trinkenreich</p></strong>
+            <p class="people-position">Postdoctoral Scholar, Oregon State University</p>
+          </div>
         </div>
-      </div>
+
+        <!---Xiaofan Chen-->
+        <div class="people-container">
+          <img src="https://avatars.githubusercontent.com/u/40400442?v=4" class="profileimg">
+          <div class="name-box" id="profile-text">
+            <strong><p class="people-link" id="chen">Xiaofan Chen</p></strong>
+            <p class="people-position">Assistant Professor, Massey University</p>
+          </div>
+        </div>
+
     </section>
 
-    <section class="py-3">
+    <!-- Current PhD Students -->
+    <h3 class="page-headers">Current PhD Students</h3>
+    <section class="curr-member-container">
+      <!---Iftekhar Ahmad-->
       <div class="people-container">
-        <a href="https://gitmahsa.github.io/"><img src="https://github.com/EPICLab.png" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="saeidi"></a>
-          <a class="site-link" ID="paper-link" href="https://gitmahsa.github.io/">Mahsa Saeidi</a>
-          <p class="people-position">PhD Candidate, Oregon State University</p>
+        <img src="media/IftekharAhmed.jpg" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Iftekhar Ahmad</p></strong>
+          <p class="people-position">Assistant Professor, UC Irvine</p>
         </div>
       </div>
-    </section>
 
-    <section class="py-3">
+      <!---Sadia Afroz-->
       <div class="people-container">
-        <a href="https://www.linkedin.com/in/mariamguizani/"><img src="https://github.com/mariamgui.png" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="guizani"></a>
-          <a class="site-link" ID="paper-link" href="https://www.linkedin.com/in/mariamguizani/">Mariam Guizani</a>
+        <img src="media/Sadia_Afroz.jpg" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Sadia Afroz</p></strong>
+          <p class="people-position">PhD Student, Oregon State University</p>
+        </div>
+      </div>
+      
+      <!---Rudrajit Choudhuri-->
+      <div class="people-container">
+        <img src="media/rudy.jpg" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Rudrajit Choudhuri</p></strong>
+          <p class="people-position">PhD Student, Oregon State University</p>
+        </div>
+      </div>
+
+      <!---Hamid Montaser-->
+      <div class="people-container">
+        <img src="https://avatars.githubusercontent.com/u/40400442?v=4" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Hamid Montaser</p></strong>
+          <p class="people-position">PhD Student, Oregon State University</p>
+        </div>
+      </div>
+
+      <!---Steve Feng-->
+      <div class="people-container">
+        <img src="media/Steve_Feng.jpg" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Steve Feng</p></strong>
+          <p class="people-position">PhD Student, Oregon State University</p>
+        </div>
+      </div>
+
+      <!---Amreeta Chatterjee-->
+      <div class="people-container">
+        <img src="media/amreeta.jpg" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Amreeta Chatterjee</p></strong>
+          <p class="people-position">PhD Student, Oregon State University</p>
+        </div>
+      </div>
+
+      <!---Nicholas Nelson-->
+      <div class="people-container">
+        <img src="media/nicholas.jpg" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Nicholas Nelson</p></strong>
           <p class="people-position">PhD Student, Oregon State University</p>
         </div>
       </div>
     </section>
 
-    <section class="py-3">
+    <!-- Current Masters Students -->
+    <h3 class="page-headers">Current Masters Students</h3>
+    <section class="curr-member-container">
+      <!---Prashant Tandan-->
       <div class="people-container">
-        <a href="https://amreeta-18.github.io/index.html"><img src="https://github.com/Amreeta-18.png" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="chatterjee"></a>
-          <a class="site-link" ID="paper-link" href="https://amreeta-18.github.io/index.html">Amreeta Chatterjee</a>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-3">
-      <div class="people-container">
-        <a href="https://zixuanfeng.github.io/zixuanfeng_page/"><img src="media/feng.png" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="fengzi"></a>
-          <a class="site-link" ID="paper-link" href="https://zixuanfeng.github.io/zixuanfeng_page/">Zixuan Feng</a>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-3">
-      <div class="people-container">
-        <a href="https://www.linkedin.com/in/pannapat"><img src="https://github.com/pannapat.png" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="chanpaip"></a>
-          <a class="site-link" ID="paper-link" href="https://www.linkedin.com/in/pannapat">Pannapat Chanpaisaeng</a>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-3">
-      <div class="people-container">
-        <a href="https://www.linkedin.com/in/rudrajit-choudhuri-bb83551b1/"><img src="https://github.com/EPICLab.png" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="choudhur"></a>
-          <a class="site-link" ID="paper-link" href="https://www.linkedin.com/in/rudrajit-choudhuri-bb83551b1/">Rudrajit Choudhuri</a>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-3">
-      <div class="people-container">
-        <a href="https://neha-sajnani.github.io"><img src="https://github.com/Neha-Sajnani.png" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="sajnanin"></a>
-          <a class="site-link" ID="paper-link" href="https://neha-sajnani.github.io">Neha Sajnani</a>
+        <img src="media/prashant.jpg" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Prashant Tandan</p></strong>
           <p class="people-position">MS Student, Oregon State University</p>
         </div>
       </div>
-    </section>
 
-    <section class="py-3">
+      <!---Ambareesh Ramakrishna-->
       <div class="people-container">
-        <a href="https://www.linkedin.com/in/emily-arteaga-455696132"><img src="media/emily.jpg" class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="arteagae"></a>
-          <a class="site-link" ID="paper-link" href="https://www.linkedin.com/in/emily-arteaga-455696132">Emily Arteaga</a>
+        <img src="media/Ambareesh_OSU.jpeg" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Ambareesh Ramakrishna</p></strong>
           <p class="people-position">MS Student, Oregon State University</p>
         </div>
       </div>
-    </section>
+
+      <!---Soumiki Chattopadhyay-->
+      <div class="people-container">
+        <img src="https://avatars.githubusercontent.com/u/40400442?v=4" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Soumiki Chattopadhyay</p></strong>
+          <p class="people-position">MS Student, Oregon State University</p>
+        </div>
+      </div>
 
     </section>
 
     <!-- Current Undergraduate Students -->
-    <h3 class="page-headers">Current Undergraduate Students</h1>
+    <h3 class="page-headers">Current Undergraduate Students</h3>
     <section class="curr-member-container">
-
-
-
-    <section class="py-3">
+      <!---KT Kimura-->
       <div class="people-container">
-        <a href="https://epiclab.github.io/"><img src="https://github.com/EPICLab.png"
-            class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="castro"></a>
-          <a class="nameid site-link" ID="paper-link" href="https://epiclab.github.io/">Aileen Abril Castro-Guzman</a>
-          <p class="people-position">Undergraduate Researcher, <br>Oregon State University</p>
+        <img src="media/KimuraKatieOsuID.JPG" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Katie Kimura</p></strong>
+          <p class="people-position">Research Assistant, Oregon State University</p>
+        </div>
+      </div>
+
+      <!---Dylan Liu-->
+      <div class="people-container">
+        <img src="media/Dylan.JPG" class="profileimg">
+        <div class="name-box" id="profile-text">
+          <strong><p class="people-link" id="ahmad">Dylan Liu</p></strong>
+          <p class="people-position">Research Assistant, Oregon State University</p>
         </div>
       </div>
     </section>
 
-    <section class="py-3">
-      <div class="people-container">
-        <a href="https://epiclab.github.io/"><img src="https://github.com/EPICLab.png"
-            class="profileimg"></a>
-        <div class="name-box" ID="profile-text">
-          <a class="people-link" id="auau"></a>
-          <a class="nameid site-link" ID="paper-link" href="https://epiclab.github.io/">Audrey Au</a>
-          <p class="people-position">Undergraduate Researcher, <br>Oregon State University</p>
-        </div>
-      </div>
-    </section>
+  </div>
 
-  </section>
+</body>
+
+</html>
+
   <!-- End Current Members -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- Alumni -->
   <section class="split">
@@ -456,12 +544,17 @@
   </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-          <p class="footer-text">Copyright &copy; Anita Sarma 2020</p>
-        </div>
-        <!-- /.container -->
-    </footer>
+    <div class="footer">
+      <div>
+          Copyright © Anita Sarma 2020
+      </div>
+      <div class="contact-info">
+          <p>Kelley Engineering Center</p>
+          <p>2500 NW Monroe Ave</p>
+          <p>Corvallis, OR 97331 USA</p>
+          <p>anita.sarma@oregonstate.edu</p>
+      </div>
+  </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
