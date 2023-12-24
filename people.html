@@ -18,58 +18,119 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <style>
-    .page-content {
-      padding-left: 7%; /* Adjust the left padding as a percentage */
-      padding-right: 7%; /* Adjust the right padding as a percentage */
+    .page-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      text-align: left;
     }
 
-    .name-box {
+    .page-container .page-content {
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+
+    /* Optional: Add media queries for responsiveness */
+    @media (max-width: 768px) {
+      .page-container .page-content {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+
+    .page-container .curr-member-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center the content */
+    }
+
+    .page-container .people-container {
+      flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed, minus margin */
+      margin: 10px; /* Adjust the margin as needed */
       text-align: center;
-      font-size: 18px; /* Adjust the font size as needed */
     }
 
-    .name-box a.site-link {
-      font-size: 20px; /* Adjust the font size for the hyperlink as needed */
+    /* Adjust order for one person */
+    .page-container .curr-member-container:only-child .people-container {
+      order: -1; /* Left */
     }
 
-    .name-box strong {
-      display: block;
-      font-size: 20px; /* Adjust the font size for emphasis as needed */
+    /* Adjust order for two people */
+    .page-container .curr-member-container:nth-child(2) .people-container:nth-child(1) {
+      order: -2; /* Left */
     }
 
-    .page-headers {
-      font-size: 30px; /* Adjust the value as needed */
+    .page-container .curr-member-container:nth-child(2) .people-container:nth-child(2) {
+      order: -1; /* Middle */
     }
-    .people-container {
-      padding: 50px; 
-      text-align: center; /* Center the content within the container */
-      margin-top: -40px;
+
+    /* Adjust order for three people */
+    .page-container .curr-member-container:nth-child(3) .people-container:nth-child(1) {
+      order: -3; /* Left */
     }
-    
-    .profileimg {
-      width: 300px; /* Set a fixed width for the image */
-      height: 300px; /* Set a fixed height for the image */
+
+    .page-container .curr-member-container:nth-child(3) .people-container:nth-child(2) {
+      order: -2; /* Middle */
+    }
+
+    .page-container .curr-member-container:nth-child(3) .people-container:nth-child(3) {
+      order: -1; /* Right */
+    }
+
+    .page-container .name-box {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .page-container .name-box a.site-link {
+      font-size: 20px;
+    }
+
+    .page-container .profileimg {
+      width: 250px;
+      height: 250px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 10px; /* Add space below the profile image */
-      display: block; /* Ensure block-level display to center image */
+      margin-bottom: 10px;
+      display: block;
       margin-left: auto;
       margin-right: auto;
     }
 
-  
-    .people-position {
+    .page-container .people-position {
       font-style: italic;
-      margin-top: 5px; /* Add space above the position */
-      margin-bottom: -10px; /*Remove some space below */
+      margin-top: 5px;
+      margin-bottom: -10px;
     }
 
-    .page-headers {
-      padding-left: 40px; /* Adjust the value as needed */
-      margin-top: 10px; /* Adjust the space above the header */
+    .page-container .page-headers {
+      padding-left: 20px;
+      margin-top: 10px;
     }
 
-    /* Add a new style for the footer */
+    .page-container .footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-container .contact-info {
+      text-align: right;
+      color: #999999;
+      font-size: 0.9em;
+      margin-bottom: 5px;
+      line-height: 0.7;
+    }
+
+    .page-container .spacing {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
     .footer {
       background-color: #343a40; /* Use the desired background color */
       color: #ffffff; /* Use the desired text color */
@@ -93,26 +154,24 @@
       margin-top: 50px;
       margin-bottom: 50px;
     }
+
   </style>
 </head>
 
 <body>
-
-  <div class="page-content">
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="https://epiclab.github.io/">EPICLab</a>
+        <a class="navbar-brand" href="index.html">EPICLab</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="https://epiclab.github.io/">Home</a>
-            </li>
             <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="people.html">People<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -127,214 +186,286 @@
     </nav>
 
     <!-- Content section -->
+    <div class="page-container">
+      <div class="page-content">
 
-    <!-- Principle Investigator -->
-    <h3 class="page-headers">Principle Investigator</h3>
-    <section class="curr-member-container">
-      <!---Anita Sarma-->
-      <div class="people-container">
-        <img src="media/anita.jpg" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="sarma"><a class="site-link" id="paper-link" href="http://web.engr.oregonstate.edu/~sarmaa/">Dr. Anita Sarma</a></p></strong>
-          <p class="people-position">Professor, Oregon State University</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Current Post-Doctoral Students -->
-    <h3 class="page-headers">Current Postdoctoral Students</h3>
-    <section class="curr-member-container">
-        <!---Bianca-->
-        <div class="people-container">
-          <img src="media/bianca_pic.jpeg" class="profileimg">
-          <div class="name-box" id="profile-text">
-            <strong><p class="people-link" id="trinkenreich">Dr. Bianca Trinkenreich</p></strong>
-            <p class="people-position">Postdoctoral Scholar, Oregon State University</p>
+        <!-- Principle Investigator -->
+        <h3 class="page-headers">Principle Investigator</h3>
+        <section class="curr-member-container">
+          <!---Anita Sarma-->
+          <div class="people-container">
+            <img src="media/anita.jpg" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="sarma"><a class="site-link" id="paper-link" href="http://web.engr.oregonstate.edu/~sarmaa/">Dr. Anita Sarma</a></p></strong>
+              <p class="people-position">Professor, Oregon State University</p>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <!---Xiaofan Chen-->
-        <div class="people-container">
-          <img src="https://avatars.githubusercontent.com/u/40400442?v=4" class="profileimg">
-          <div class="name-box" id="profile-text">
-            <strong><p class="people-link" id="chen">Xiaofan Chen</p></strong>
-            <p class="people-position">Assistant Professor, Massey University</p>
+        <!-- Current Post-Doctoral Students -->
+        <h3 class="page-headers">Current Postdoctoral Students</h3>
+        <section class="curr-member-container">
+            <!---Bianca-->
+            <div class="people-container">
+              <img src="media/bianca_pic.jpeg" class="profileimg">
+              <div class="name-box" id="profile-text">
+                <strong><p class="people-link" id="trinkenreich">Dr. Bianca Trinkenreich</p></strong>
+                <p class="people-position">Postdoctoral Scholar, Oregon State University</p>
+              </div>
+            </div>
+
+            <!---Xiaofan Chen-->
+            <div class="people-container">
+              <img src="https://avatars.githubusercontent.com/u/40400442?v=4" class="profileimg">
+              <div class="name-box" id="profile-text">
+                <strong><p class="people-link" id="chen">Xiaofan Chen</p></strong>
+                <p class="people-position">Assistant Professor, Massey University</p>
+              </div>
+            </div>
+
+        </section>
+
+        <!-- Current PhD Students -->
+        <h3 class="page-headers">Current PhD Students</h3>
+        <section class="curr-member-container">
+          
+          <!---Sadia Afroz-->
+          <div class="people-container">
+            <img src="media/Sadia_Afroz.jpg" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Sadia Afroz</p></strong>
+              <p class="people-position">PhD Student, Oregon State University</p>
+            </div>
           </div>
-        </div>
+          
+          <!---Rudrajit Choudhuri-->
+          <div class="people-container">
+            <img src="media/rudy.jpg" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Rudrajit Choudhuri</p></strong>
+              <p class="people-position">PhD Student, Oregon State University</p>
+            </div>
+          </div>
 
-    </section>
+          <!---Hamid Montaser-->
+          <div class="people-container">
+            <img src="https://avatars.githubusercontent.com/u/40400442?v=4" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Hamid Montaser</p></strong>
+              <p class="people-position">PhD Student, Oregon State University</p>
+            </div>
+          </div>
 
-    <!-- Current PhD Students -->
-    <h3 class="page-headers">Current PhD Students</h3>
-    <section class="curr-member-container">
-      <!---Iftekhar Ahmad-->
-      <div class="people-container">
-        <img src="media/IftekharAhmed.jpg" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Iftekhar Ahmad</p></strong>
-          <p class="people-position">Assistant Professor, UC Irvine</p>
-        </div>
+          <!---Steve Feng-->
+          <div class="people-container">
+            <img src="media/Steve_Feng.jpg" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Steve Feng</p></strong>
+              <p class="people-position">PhD Student, Oregon State University</p>
+            </div>
+          </div>
+
+          <!---Amreeta Chatterjee-->
+          <div class="people-container">
+            <img src="media/amreeta.jpg" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Amreeta Chatterjee</p></strong>
+              <p class="people-position">PhD Student, Oregon State University</p>
+            </div>
+          </div>
+
+          <!---Nicholas Nelson-->
+          <div class="people-container">
+            <img src="media/nicholas.jpg" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Nicholas Nelson</p></strong>
+              <p class="people-position">PhD Student, Oregon State University</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Current Masters Students -->
+        <h3 class="page-headers">Current Masters Students</h3>
+        <section class="curr-member-container">
+          <!---Prashant Tandan-->
+          <div class="people-container">
+            <img src="media/prashant.jpg" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Prashant Tandan</p></strong>
+              <p class="people-position">MS Student, Oregon State University</p>
+            </div>
+          </div>
+
+          <!---Ambareesh Ramakrishna-->
+          <div class="people-container">
+            <img src="media/Ambareesh_OSU.jpeg" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Ambareesh Ramakrishna</p></strong>
+              <p class="people-position">MS Student, Oregon State University</p>
+            </div>
+          </div>
+
+          <!---Soumiki Chattopadhyay-->
+          <div class="people-container">
+            <img src="https://avatars.githubusercontent.com/u/40400442?v=4" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Soumiki Chattopadhyay</p></strong>
+              <p class="people-position">MS Student, Oregon State University</p>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Current Undergraduate Students -->
+        <h3 class="page-headers">Current Undergraduate Students</h3>
+        <section class="curr-member-container">
+          <!---KT Kimura-->
+          <div class="people-container">
+            <img src="media/KimuraKatieOsuID.JPG" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Katie Kimura</p></strong>
+              <p class="people-position">Research Assistant, Oregon State University</p>
+            </div>
+          </div>
+
+          <!---Dylan Liu-->
+          <div class="people-container">
+            <img src="media/Dylan.JPG" class="profileimg">
+            <div class="name-box" id="profile-text">
+              <strong><p class="people-link" id="ahmad">Dylan Liu</p></strong>
+              <p class="people-position">Research Assistant, Oregon State University</p>
+            </div>
+        </section>
       </div>
-
-      <!---Sadia Afroz-->
-      <div class="people-container">
-        <img src="media/Sadia_Afroz.jpg" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Sadia Afroz</p></strong>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-      
-      <!---Rudrajit Choudhuri-->
-      <div class="people-container">
-        <img src="media/rudy.jpg" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Rudrajit Choudhuri</p></strong>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-
-      <!---Hamid Montaser-->
-      <div class="people-container">
-        <img src="https://avatars.githubusercontent.com/u/40400442?v=4" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Hamid Montaser</p></strong>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-
-      <!---Steve Feng-->
-      <div class="people-container">
-        <img src="media/Steve_Feng.jpg" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Steve Feng</p></strong>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-
-      <!---Amreeta Chatterjee-->
-      <div class="people-container">
-        <img src="media/amreeta.jpg" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Amreeta Chatterjee</p></strong>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-
-      <!---Nicholas Nelson-->
-      <div class="people-container">
-        <img src="media/nicholas.jpg" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Nicholas Nelson</p></strong>
-          <p class="people-position">PhD Student, Oregon State University</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Current Masters Students -->
-    <h3 class="page-headers">Current Masters Students</h3>
-    <section class="curr-member-container">
-      <!---Prashant Tandan-->
-      <div class="people-container">
-        <img src="media/prashant.jpg" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Prashant Tandan</p></strong>
-          <p class="people-position">MS Student, Oregon State University</p>
-        </div>
-      </div>
-
-      <!---Ambareesh Ramakrishna-->
-      <div class="people-container">
-        <img src="media/Ambareesh_OSU.jpeg" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Ambareesh Ramakrishna</p></strong>
-          <p class="people-position">MS Student, Oregon State University</p>
-        </div>
-      </div>
-
-      <!---Soumiki Chattopadhyay-->
-      <div class="people-container">
-        <img src="https://avatars.githubusercontent.com/u/40400442?v=4" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Soumiki Chattopadhyay</p></strong>
-          <p class="people-position">MS Student, Oregon State University</p>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Current Undergraduate Students -->
-    <h3 class="page-headers">Current Undergraduate Students</h3>
-    <section class="curr-member-container">
-      <!---KT Kimura-->
-      <div class="people-container">
-        <img src="media/KimuraKatieOsuID.JPG" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Katie Kimura</p></strong>
-          <p class="people-position">Research Assistant, Oregon State University</p>
-        </div>
-      </div>
-
-      <!---Dylan Liu-->
-      <div class="people-container">
-        <img src="media/Dylan.JPG" class="profileimg">
-        <div class="name-box" id="profile-text">
-          <strong><p class="people-link" id="ahmad">Dylan Liu</p></strong>
-          <p class="people-position">Research Assistant, Oregon State University</p>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </div>
-
 </body>
 
 </html>
 
   <!-- End Current Members -->
 
+<!-- Alumni -->
+<section class="split" style="text-align: left;">
+  <div class="split-left alumni-container" style="width: 80%; margin-left: auto; margin-right: auto; padding: 20px; margin-top: 80px">
+    <h3 class="page-headers" style="padding-left: 10px;">Alumni</h3>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Alumni -->
-  <section class="split">
-  <div class="split-left alumni-container" style="padding-top: 0px; padding-left: 10px">
-  <h3 class="page-headers" style="padding-left: 10px">Alumni</h1>
+        <!--PhD Alumni-->
 
         <div class="alumni-container">
-          <a class="inactive alumni-name">Souti Chattopadhyay</a>
-          <a class="inactive alumni-position">PhD, Oregon State University (2022)</a>
-          <a class="inactive alumni-thesis">Thesis</a>
+          <a class="inactive alumni-name">Mariam Guizani</a>
+          <a class="inactive alumni-position">PhD, Oregon State University (2023)</a>
         </div>
 
         <div class="alumni-container">
-          <a class="inactive alumni-name">Andrea Tongsak</a>
-          <a class="inactive alumni-position">BS, Oregon State University</a>
+          <a class="inactive alumni-name">Mahsa Saeidi</a>
+          <a class="inactive alumni-position">PhD, Oregon State University (2022)</a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Souti Chattopadhyay</a>
+          <a class="inactive alumni-position">PhD, Oregon State University (2022) <br> Assistant Professor, University of Southern California, Los Angeles</a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Caius Brindescu</a>
+          <a class="inactive alumni-position">PhD, Oregon State University (2020) <br> Technical Staff, Etleap</a>
+          <a class="inactive alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/pg15bn59s">Thesis</a></a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Umme Ayda Mannan</a>
+          <a class="inactive alumni-position">PhD, Oregon State University (2020)</a>
+          <a class="inactive alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/c534fw42q">Thesis</a></a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Bakhtiar Khan Kasi</a>
+          <a class="inactive alumni-position">PhD, University of Nebraska, Lincoln (2015) <br> Dean, Assoc. Professor, Balochistan University of Information Technology, Engineering and Management Sciences</a>
+          <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/dissertations/AAI3738584/">Thesis</a></a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Sandeep Kuttal</a>
+          <a class="inactive alumni-position">PhD, University of Nebraska, Lincoln (2014) <br> Asst. Prof, University of Tulsa</a>
+          <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/dissertations/AAI3632730/">Thesis</a></a>
+        </div>
+
+        <!--MS Alumni-->
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Pannapat Chanpaisaeng</a>
+          <a class="inactive alumni-position">MS, Oregon State University (2023)</a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Emily Artega</a>
+          <a class="inactive alumni-position">MS, Oregon State University (2023)</a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Neha Sajnani</a>
+          <a class="inactive alumni-position">MS, Oregon State University (2023)</a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Puja Agarwal</a>
+          <a class="inactive alumni-position">MS, Oregon State University (2023)</a>
         </div>
 
         <div class="alumni-container">
           <a class="inactive alumni-name">Turgay Caglar</a>
           <a class="inactive alumni-position">MS, Oregon State University (2022)</a>
           <a class="inactive alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/kp78gq03c">Thesis</a></a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Manideepa Saginatham</a>
+          <a class="inactive alumni-position">MS, Oregon State University (2020)</a>
+          <a class="inactive alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/cn69mb541">Thesis</a></a>
+        </div>
+
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Marjan Adeli</a>
+          <a class="inactive alumni-position">MS, Oregon State University (2020)</a>
+          <a class="alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/5x21tn40d">Thesis</a></a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Sogol Balali</a>
+          <a class="inactive alumni-position">MS, Oregon State University (2020) <br> Robotics Researcher, Computer Scientist, Oregon State University</a>
+          <a class="alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/3t945z015">Thesis</a></a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Shane McKee</a>
+          <a class="inactive alumni-position">MEng, Oregon State University (2016) <br> Software Engineer, Intel</a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Kevin North</a>
+          <a class="inactive alumni-position">MS, University of Nebraska, Lincoln (2016) <br> Web Developer, Applied Systems</a>
+          <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/computerscidiss/103/">Thesis</a></a>
+        </div>
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Corey Jergensen</a>
+          <a class="inactive alumni-position">MS, University of Nebraska, Lincoln (2013) <br> Software Engineer, Travefy</a>
+          <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/computerscidiss/63/">Thesis</a></a>
+        </div>
+ 
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Jianguo Wang</a>
+          <a class="inactive alumni-position">MS, University of Nebraska, Lincoln (2012) <br> Lead Software Engineer, Grab</a>
+          <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/computerscidiss/38/">Thesis</a></a>
+        </div>
+
+        <!--Other Alumni-->
+
+        <div class="alumni-container">
+          <a class="inactive alumni-name">Andrea Tongsak</a>
+          <a class="inactive alumni-position">BS, Oregon State University</a>
         </div>
 
         <div class="alumni-container">
@@ -355,36 +486,6 @@
         <div class="alumni-container">
           <a class="inactive alumni-name">Karen Berba</a>
           <a class="inactive alumni-position">BS, Oregon State University (2021) <br> MS Student, California State University, Los Angeles</a>
-        </div>
-
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Umme Ayda Mannan</a>
-            <a class="inactive alumni-position">PhD, Oregon State University (2020)</a>
-            <a class="inactive alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/c534fw42q">Thesis</a></a>
-        </div>
-
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Caius Brindescu</a>
-            <a class="inactive alumni-position">PhD, Oregon State University (2020) <br> Technical Staff, Etleap</a>
-            <a class="inactive alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/pg15bn59s">Thesis</a></a>
-        </div>
-      
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Manideepa Saginatham</a>
-            <a class="inactive alumni-position">MS, Oregon State University (2020)</a>
-            <a class="inactive alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/cn69mb541">Thesis</a></a>
-        </div>
-      
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Marjan Adeli</a>
-            <a class="inactive alumni-position">MS, Oregon State University (2020)</a>
-            <a class="alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/5x21tn40d">Thesis</a></a>
-        </div>
-      
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Sogol Balali</a>
-            <a class="inactive alumni-position">MS, Oregon State University (2020) <br> Robotics Researcher, Computer Scientist, Oregon State University</a>
-            <a class="alumni-thesis"><a href="https://ir.library.oregonstate.edu/concern/graduate_thesis_or_dissertations/3t945z015">Thesis</a></a>
         </div>
       
         <div class="alumni-container">
@@ -433,44 +534,22 @@
             <a class="inactive alumni-position">BS, Oregon State University (2017) <br> Site Reliabilty Engineer, Kollective Technology</a>
         </div>
       
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Shane McKee</a>
-            <a class="inactive alumni-position">MEng, Oregon State University (2016) <br> Software Engineer, Intel</a>
-        </div>
 
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Kevin North</a>
-            <a class="inactive alumni-position">MS, University of Nebraska, Lincoln (2016) <br> Web Developer, Applied Systems</a>
-            <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/computerscidiss/103/">Thesis</a></a>
-        </div>
-      
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Bakhtiar Khan Kasi</a>
-            <a class="inactive alumni-position">PhD, University of Nebraska, Lincoln (2015) <br> Dean, Assoc. Professor, Balochistan University of Information Technology, Engineering and Management Sciences</a>
-            <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/dissertations/AAI3738584/">Thesis</a></a>
-        </div>
+
+
 
         <div class="alumni-container">
             <a class="inactive alumni-name">Xiaofan Chen</a>
             <a class="inactive alumni-position">PostDoc, University of Nebraska, Lincoln (2014-2015) <br> Lecturer, Massey University of New Zealand</a>
         </div>
     
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Sandeep Kuttal</a>
-            <a class="inactive alumni-position">PhD, University of Nebraska, Lincoln (2014) <br> Asst. Prof, University of Tulsa</a>
-            <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/dissertations/AAI3632730/">Thesis</a></a>
-        </div>
     
         <div class="alumni-container">
             <a class="inactive alumni-name">Caleb Larsen</a>
             <a class="inactive alumni-position">BS, University of Nebraska, Lincoln (2014) <br> Software Engineer, RentVision</a>
         </div>
 
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Corey Jergensen</a>
-            <a class="inactive alumni-position">MS, University of Nebraska, Lincoln (2013) <br> Software Engineer, Travefy</a>
-            <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/computerscidiss/63/">Thesis</a></a>
-        </div>
+
     
         <div class="alumni-container">
             <a class="inactive alumni-name">Azrina Azmi Abdullah</a>
@@ -487,24 +566,20 @@
             <a class="inactive alumni-position">Undergraduate, University of Nebraska, Lincoln (2013)</a>
         </div>
 
-      
-        <div class="alumni-container">
-            <a class="inactive alumni-name">Jianguo Wang</a>
-            <a class="inactive alumni-position">MS, University of Nebraska, Lincoln (2012) <br> Lead Software Engineer, Grab</a>
-            <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/computerscidiss/38/">Thesis</a></a>
-        </div>
+
 
         <div class="inactive alumni-container">
             <a class="inactive alumni-name">James Sukup</a>
             <a class="inactive alumni-position">Undergraduate, University of Nebraska, Lincoln (2012) <br> Software Engineer, EF Johnson Technologies, Inc.</a>
         </div>
-    </div>
-    </h3>
+      </div>
+    </section>
+  </div>
 
 
   <!-- High School Interns -->
-  <div class="split-right alumni-container" style="padding-top: 0px; padding-left: 10px; padding-right: 10px">
-    <h3 class="page-headers" style="padding-left: 10px">High School Interns</h1>
+  <div class="split-right alumni-container" style="width: 80%; margin-left: auto; margin-right: auto; padding: 20px; margin-bottom: 80px">
+    <h3 class="page-headers" style="padding-left: 10px;">High School Interns</h3>
 
         <div class="inactive alumni-container">
             <a class="inactive alumni-name">Jimena Noa Guierva</a>
@@ -535,13 +610,12 @@
             <a class="inactive alumni-name">Annel Amelia Leon</a>
             <span class="inactive alumni-position"><a href="https://www.saturdayacademy.org/ase">ASE Program</a> (2018)</span>
         </div>
-        <br>
-
-    </div>
-    </h3>
-  </section>
-
+        
+      </div>
+    </section>
   </div>
+</div>
+</div>
 
     <!-- Footer -->
     <div class="footer">

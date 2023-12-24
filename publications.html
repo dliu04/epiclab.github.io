@@ -21,6 +21,33 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="https://kit.fontawesome.com/ac647077b9.js" crossorigin="anonymous"></script> -->
     
+	<style>
+		.footer {
+			background-color: #343a40; /* Use the desired background color */
+			color: #ffffff; /* Use the desired text color */
+			padding: 20px;
+			text-align: center;
+			margin-top: auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.contact-info {
+			text-align: right;
+			color: #999999; /* Slightly darker color for the address */
+			font-size: 0.9em; /* Smaller font size for the address */
+			margin-bottom: 5px; /* Adjust the margin bottom as needed */
+			line-height: 0.7; /* Adjust the line-height to reduce spacing between lines */
+		}
+
+		.spacing {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+	</style>
+
+
   </head>
 
   <body>
@@ -1980,12 +2007,17 @@
   </div>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-container">
-        <p class="footer-text">Copyright &copy; Anita Sarma 2020</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    <div class="footer">
+		<div>
+			Copyright © Anita Sarma 2020
+		</div>
+		<div class="contact-info">
+			<p>Kelley Engineering Center</p>
+			<p>2500 NW Monroe Ave</p>
+			<p>Corvallis, OR 97331 USA</p>
+			<p>anita.sarma@oregonstate.edu</p>
+		</div>
+	</div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
