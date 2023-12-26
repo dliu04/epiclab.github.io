@@ -1,4 +1,4 @@
-# epiclab.github.io
+# Updating epiclab.github.io
 (Work in progress) Complete overhaul of the EPICLabs website.
 
 Temporary domain:
