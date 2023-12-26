@@ -99,6 +99,10 @@
       display: flex;
     }
 
+    .svg-icon{
+      margin-bottom: 20px;
+    }
+
     .split-left,
     .split-middle,
     .split-right {
@@ -124,7 +128,7 @@
       /* Adjust the heading size */
       font-weight: bold;
       /* Make the heading bold */
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       /* Add consistent margin to the bottom of the header */
     }
 
@@ -140,21 +144,26 @@
 <body>
   <section class="split">
     <div class="split-left">
+      <img src="media/icons/flask-icon.svg" alt="Flask SVG" height="60px" class="svg-icon">
       <h2>Mission</h2>
       <p class="lead"><br><strong>EPICLabs</strong> stands for <strong></strong>End user-centric, Productivity, Inclusion and Cognition. Our work follows an interdisciplinary approach of performing empirical user studies to understand the problems and barriers that developers currently face, designing and developing interactive tools to make developers and teams more efficient, and formative and summative user studies to evaluate the benefits of the tools. <br> <br> Our research approach is <strong>interdisciplinary, leveraging research in data mining, program analysis, software design, software visualization, and human-computer interaction.</strong></p>
     </div>
+  
     <div class="split-middle">
+      <img src="media/icons/people-icon.svg" alt="People SVG" height="60px" class="svg-icon"> 
       <h2>Join Us</h2>
       <p class="lead"><br>Interested in our mission? We're seeking enthusiastic individuals passionate about exploring user experiences through user studies, tool development, and interdisciplinary research. <br> <br> <br> If you're interested in boosting productivity and making a positive impact, contact <strong><a href="mailto:anita.sarma@oregonstate.edu">Anita Sarma</a></strong> to explore joining us!</p>
     </div>
-
+  
     <div class="split-right" id="news-section">
+      <img src="media/icons/publications-icon.svg" alt="Feed SVG" height="60px" class="svg-icon">
       <h2>Recent Publications</h2> <br>
       <p class="lead" id="news-content"></p>
     </div>
   </section>
-
-  <section class="spacing"> </section>
+  
+  <!-- Experimenation Carousel-->
+  
 
   <!-- Footer -->
   <div class="footer">
@@ -186,9 +195,12 @@
       const newsContent = [];
 
       // Limit to the first three publications
-      for (let i = 1; i < 4 && i < publications.length; i++) {
+      for (let i = 1; i < 3 && i < publications.length; i++) {
         const publication = publications[i];
+        const conferenceLink = publication.querySelector('a[href^="https://conf.researchr.org"]');
+        const conferenceName = conferenceLink ? conferenceLink.textContent : 'Conference not available';
         const title = publication.querySelector('.title').textContent;
+        const authors = publication.querySelector('.author').textContent;
         const doiElement = publication.querySelector('a[href^="https://doi.org"]');
         const doi = doiElement ? doiElement.getAttribute('href') : 'DOI not available';
         const pdfElement = publication.querySelector('a[href$=".pdf"]');
@@ -200,8 +212,14 @@
         // Create a "View PDF" button if a PDF link is available
         const pdfButton = pdfLink ? `<button class="pdf-button" onclick="window.open('${pdfLink}', '_blank')">View PDF</button>` : '';
 
-        // Format the news content
-        const publicationInfo = `<strong>${title}</strong><br>${doiButton}${pdfButton}<br><br>`;
+        // Format the news content with a border
+        const publicationInfo = `<div class="publication-container">
+                                  <span class="conference">${conferenceName}</span>
+                                  <strong>${title}</strong><br>
+                                  <span class="author">${authors}</span><br>
+                                  ${doiButton}${pdfButton}
+                                </div>`;
+
         newsContent.push(publicationInfo);
       }
 
@@ -216,7 +234,7 @@
   document.addEventListener('DOMContentLoaded', updateNewsSection);
 </script>
 
-<!-- Style for the buttons -->
+<!-- Style for the buttons and container -->
 <style>
   .doi-button, .pdf-button {
     padding: 10px;
@@ -233,9 +251,25 @@
     background-color: #606060; /* Customize PDF button color */
     border: 1px solid #606060;
   }
+
+  .publication-container {
+    border: 1px solid #888888; /* Border to separate papers */
+    padding: 15px; /* Padding within the container */
+    margin-bottom: 20px; /* Margin between papers */
+  }
+
+  .conference {
+    font-size: 0.8em; /* Adjust the font size for the conference name */
+    font-weight: bold; /* Make the conference name bold */
+    display: block; /* Ensure the conference name is on a new line */
+    margin-bottom: 5px; /* Adjust the margin between conference name and paper title */
+  }
+
+  .author {
+    font-size: 0.9em; /* Adjust the font size for the author names */
+    font-style: italic; /* Make the author names italic */
+  }
 </style>
-
-
 
 
 </body>
