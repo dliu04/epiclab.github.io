@@ -191,9 +191,17 @@
         const title = publication.querySelector('.title').textContent;
         const doiElement = publication.querySelector('a[href^="https://doi.org"]');
         const doi = doiElement ? doiElement.getAttribute('href') : 'DOI not available';
+        const pdfElement = publication.querySelector('a[href$=".pdf"]');
+        const pdfLink = pdfElement ? pdfElement.getAttribute('href') : null;
 
         // Create a hyperlink button for the DOI
-        const publicationInfo = `<strong>${title}</strong><br><button class="doi-button" onclick="window.open('${doi}', '_blank')">View DOI</button><br><br>`;
+        const doiButton = `<button class="doi-button" onclick="window.open('${doi}', '_blank')">View DOI</button>`;
+
+        // Create a "View PDF" button if a PDF link is available
+        const pdfButton = pdfLink ? `<button class="pdf-button" onclick="window.open('${pdfLink}', '_blank')">View PDF</button>` : '';
+
+        // Format the news content
+        const publicationInfo = `<strong>${title}</strong><br>${doiButton}${pdfButton}<br><br>`;
         newsContent.push(publicationInfo);
       }
 
@@ -208,17 +216,25 @@
   document.addEventListener('DOMContentLoaded', updateNewsSection);
 </script>
 
-<!-- Style for the DOI button -->
+<!-- Style for the buttons -->
 <style>
-  .doi-button {
+  .doi-button, .pdf-button {
     padding: 10px;
-    background-color: #606060;
+    background-color: #747373;
     color: #ffffff;
-    border: 1px solid #606060;
+    border: 1px solid #747373;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 10px; /* Adjust the margin between buttons */
+    margin-top: 15px; /* Adjust the margin-top to increase the distance */
+  }
+
+  .pdf-button {
+    background-color: #606060; /* Customize PDF button color */
+    border: 1px solid #606060;
   }
 </style>
+
 
 
 
