@@ -9,13 +9,17 @@
 
   <title>EPICLab</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="css/full-width-pics.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
   <!-- Styles -->
   <style>
     body {
@@ -59,7 +63,8 @@
       margin-top: 50px;
       margin-bottom: 50px;
     }
-  </style>
+</style>
+
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -162,6 +167,294 @@
     </div>
   </section>
   
+  <h3 class="page-headers">Featured Papers</h3>
+
+
+  <!-- Carousel Section -->
+
+  <style>
+    .photo-carousel {
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 20px auto; /* Center the carousel and adjust margin as needed */
+    }
+
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Center items on the y-axis */
+      margin-top: 20px;
+      margin-bottom: 40px; /* Add margin-bottom to create space between carousel and next section */
+    }
+  
+    .carousel {
+      width: 500px; /* Adjust the width of the carousel */
+      overflow: hidden;
+    }
+  
+    .carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  flex-wrap: nowrap; /* Ensure that the items don't wrap to the next line */
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* Each item should take the full width of the carousel */
+}
+
+  
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      filter: brightness(100%); /* Initial brightness level */
+      transition: filter 0.3s ease-in-out;
+      cursor: pointer; /* Add cursor pointer for interactivity */
+    }
+  
+    .carousel-item:hover img {
+      filter: brightness(50%); /* Adjust the brightness level on hover */
+    }
+  
+    .carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.carousel-item:hover .carousel-caption {
+  opacity: 1;
+}
+
+.carousel-caption p {
+  font-style: italic;
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+  
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+  
+    .carousel-item:hover .carousel-buttons {
+      display: flex;
+    }
+  
+    .carousel-buttons a {
+      background-color: #747373;
+      color: #ffffff;
+      border: 1px solid #747373;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 5px 10px;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+  
+    .carousel-buttons a:hover {
+      background-color: #606060;
+      border: 1px solid #606060;
+    }
+  
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Center items on the y-axis */
+      margin-top: 20px;
+    }
+  
+    .external-carousel-control {
+      background: #333;
+      border: none;
+      font-size: 1.5em;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      margin: 0 5px;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .external-carousel-control:hover {
+      background: #555;
+    }
+  
+    /* Position the Previous button on the left */
+    .external-carousel-control:first-child {
+      order: -1;
+    }
+
+    .carousel-indicators {
+  position: absolute;
+  bottom: 5px; /* Adjust the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+
+
+.carousel-indicators li {
+  background-color: #ddd;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicators li.active {
+  background-color: #555;
+}
+
+  </style>
+  
+  
+
+  <div class="carousel-container">
+    <button class="external-carousel-control" onclick="prevSlide()">❮</button>
+    <div id="awardCarousel" class="carousel slide" data-ride="carousel" data-pause="hover">
+      <div class="carousel-indicators">
+        <li data-target="#awardCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#awardCarousel" data-slide-to="1"></li>
+        <li data-target="#awardCarousel" data-slide-to="2"></li>
+        <li data-target="#awardCarousel" data-slide-to="3"></li>
+        <li data-target="#awardCarousel" data-slide-to="4"></li>
+        <li data-target="#awardCarousel" data-slide-to="5"></li>
+        <li data-target="#awardCarousel" data-slide-to="6"></li>
+        <li data-target="#awardCarousel" data-slide-to="7"></li>
+        <!-- Add more li elements for additional slides as needed -->
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" id="carousel-item-1">
+            <img src="media/research_graphics/do_i_belong.png" alt="Do I Belong? Modeling Sense of Virtual Community Among Linux Kernel Contributors">
+            <div class="carousel-buttons">
+                <a href="https://doi.org/10.1109/ICSE48619.2023.00038" target="_blank">DOI</a>
+                <a href="publications/icse23-trinkenreich.pdf" target="_blank">PDF</a>
+            </div>
+            <div class="carousel-caption">
+                <p class="photo-caption">ICSE 2023 Distinguished Paper Award</p>
+            </div>
+        </div>
+
+        <div class="carousel-item" id="carousel-item-2">
+          <img src="media/research_graphics/recommending_tasks.png" alt="Recommending Tasks to Newcomers in OSS Projects: How Do Mentors Handle It?">
+          <div class="carousel-buttons">
+              <a href="https://doi.org/10.1145/3412569.3412571" target="_blank">DOI</a>
+              <a href="publications/opensym20-balali.pdf" target="_blank">PDF</a>
+          </div>
+          <div class="carousel-caption">
+              <p class="photo-caption">OpenSym 2020 Best Paper Award</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" id="carousel-item-3">
+          <img src="media/research_graphics/biases.png" alt="A Tale from the Trenches: Cognitive Biases and Software Development">
+          <div class="carousel-buttons">
+              <a href="https://doi.org/10.1145/3377811.3380330" target="_blank">DOI</a>
+              <a href="publications/icse20-chattopadhyay.pdf" target="_blank">PDF</a>
+          </div>
+          <div class="carousel-caption">
+              <p class="photo-caption">ICSE 2020 Distinguished Paper Award</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" id="carousel-item-4">
+          <img src="media/research_graphics/tradeoffs.png" alt="Trade-offs in Continuous Integration: Assurance, Security, and Flexibility">
+          <div class="carousel-buttons">
+              <a href="https://doi.org/10.1145/3106237.3106270" target="_blank">DOI</a>
+              <a href="publications/esecfse17-hilton.pdf" target="_blank">PDF</a>
+          </div>
+          <div class="carousel-caption">
+              <p class="photo-caption">ESEC/FSE 2017 Distinguished Paper Award</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" id="carousel-item-5">
+          <img src="media/research_graphics/merge_conflicts.png" alt="Software Practitioner Perspectives on Merge Conflicts and Resolutions">
+          <div class="carousel-buttons">
+              <a href="https://doi.org/10.1109/ICSME.2017.53" target="_blank">DOI</a>
+              <a href="publications/icsme17-mckee.pdf" target="_blank">PDF</a>
+          </div>
+          <div class="carousel-caption">
+              <p class="photo-caption">ICSME 2017 Distinguished Paper Award</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" id="carousel-item-6">
+          <img src="media/research_graphics/global_stage.png" alt="Hiring in the Global Stage: Profiles of Online Contributions">
+          <div class="carousel-buttons">
+              <a href="https://doi.org/10.1109/ICGSE.2016.35" target="_blank">DOI</a>
+              <a href="publications/icgse16-sarma.pdf" target="_blank">PDF</a>
+          </div>
+          <div class="carousel-caption">
+              <p class="photo-caption">ICGSE 2016 Best Paper Award</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" id="carousel-item-7">
+          <img src="media/research_graphics/abundance.png" alt="Foraging among an Overabundance of Similar Variants">
+          <div class="carousel-buttons">
+              <a href="https://doi.org/10.1145/2858036.2858469" target="_blank">DOI</a>
+              <a href="publications/chi16-ragavan.pdf" target="_blank">PDF</a>
+          </div>
+          <div class="carousel-caption">
+              <p class="photo-caption">CHI 2016 Best Paper Award</p>
+          </div>
+        </div>
+
+        <div class="carousel-item" id="carousel-item-8">
+          <img src="media/research_graphics/artifact_analysis.png" alt="End-User Programmers and their Communities: An Artifact-based Analysis">
+          <div class="carousel-buttons">
+              <a href="https://doi.org/10.1109/ESEM.2011.23" target="_blank">DOI</a>
+              <a href="pdf_link_1" target="_blank">PDF</a>
+          </div>
+          <div class="carousel-caption">
+              <p class="photo-caption">ESEM 2011 Distinguished Paper Award</p>
+          </div>
+        </div>
+
+        <!-- Add more carousel items here -->
+
+      </div>
+    </div>
+    
+    <!-- External carousel control buttons -->
+    <button class="external-carousel-control" onclick="nextSlide()">❯</button>
+    
+  </div>
+  
+
+<!-- Carousel Move Script -->
+<script>
+  function prevSlide() {
+    $('#awardCarousel').carousel('prev');
+  }
+
+  function nextSlide() {
+    $('#awardCarousel').carousel('next');
+  }
+</script>
+
 
   <!-- Footer -->
   <div class="footer">
