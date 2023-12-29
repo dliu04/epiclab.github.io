@@ -193,16 +193,15 @@
     }
   
     .carousel-inner {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  flex-wrap: nowrap; /* Ensure that the items don't wrap to the next line */
-}
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      flex-wrap: nowrap; /* Ensure that the items don't wrap to the next line */
+    }
 
-.carousel-item {
-  flex: 0 0 100%; /* Each item should take the full width of the carousel */
-}
+    .carousel-item {
+      flex: 0 0 100%; /* Each item should take the full width of the carousel */
+    }
 
-  
     .carousel-item img {
       width: 100%;
       height: auto;
@@ -217,26 +216,26 @@
     }
   
     .carousel-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.carousel-item:hover .carousel-caption {
-  opacity: 1;
-}
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .carousel-item:hover .carousel-caption {
+      opacity: 1;
+    }
 
-.carousel-caption p {
-  font-style: italic;
-  font-size: 12px;
-  color: #ffffff;
-  margin-top: 5px;
-}
+    .carousel-caption p {
+      font-style: italic;
+      font-size: 12px;
+      color: #ffffff;
+      margin-top: 5px;
+    }
 
   
     .carousel-buttons {
@@ -300,33 +299,29 @@
     }
 
     .carousel-indicators {
-  position: absolute;
-  bottom: 5px; /* Adjust the distance from the bottom */
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
+      position: absolute;
+      bottom: 5px; /* Adjust the distance from the bottom */
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
 
+    .carousel-indicators li {
+      background-color: #ddd;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
 
-
-.carousel-indicators li {
-  background-color: #ddd;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.carousel-indicators li.active {
-  background-color: #555;
-}
-
+    .carousel-indicators li.active {
+      background-color: #555;
+    }
   </style>
-  
   
 
   <div class="carousel-container">
