@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>EPICLab - Research</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/full-width-pics.css" rel="stylesheet">
+  <link href="css/full-width-pics.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <style>
+
+    .page-headers {
+      text-align: center;
+      margin-top: 30px; /* Adjust the top margin as needed */ 
+    }
+
+    .photo-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px; /* Adjust margin between rows of photos */
+      padding: 40px; /* Add padding to the left and right of the container */
+    }
+
+  
+    .photo {
+      position: relative;
+      margin: 10px; /* Adjust margin between photos */
+      box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+      width: calc(33.333% - 20px); /* Adjust width and margin between photos */
+      max-width: 350px; /* Set a maximum width for the photos */
+      min-width: 300px; /* Set a minimum width for the photos */
+    }
+  
+    .photo img {
+      width: 100%; /* Ensure the image takes up the full width of the container */
+      height: auto; /* Maintain aspect ratio */
+      max-height: 350px; /* Set a maximum height as needed */
+      object-fit: cover;
+      transition: filter 0.3s ease-in-out;
+    }
+  
+    .photo-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  
+    .photo:hover img {
+      filter: brightness(70%); /* Adjust the brightness level */
+    }
+  
+    .photo:hover .photo-overlay {
+      opacity: 1;
+    }
+  
+    .overlay-content {
+      text-align: center;
+      color: #ffffff;
+    }
+  
+    .overlay-content a {
+      display: inline-block;
+      padding: 10px;
+      background-color: #747373;
+      color: #ffffff;
+      border: 1px solid #747373;
+      border-radius: 5px;
+      margin: 5px;
+      text-decoration: none;
+    }
+  
+    .photo-caption {
+      font-style: italic;
+      font-size: 12px;
+      color: #ffffff;
+      margin-top: 5px;
+    }
+  
+    /* Media query for narrow screens */
+    @media screen and (max-width: 768px) {
+      .photo-container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .photo {
+        width: calc(100% - 20px); /* Full width for narrow screens */
+        margin: 10px 0; /* Adjust margin between photos */
+      }
+    }
+
+    .footer {
+      background-color: #343a40;
+      /* Use the desired background color */
+      color: #ffffff;
+      /* Use the desired text color */
+      padding: 20px;
+      text-align: center;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .contact-info {
+      text-align: right;
+      color: #999999;
+      /* Slightly darker color for the address */
+      font-size: 0.9em;
+      /* Smaller font size for the address */
+      margin-bottom: 5px;
+      /* Adjust the margin bottom as needed */
+      line-height: 0.7;
+      /* Adjust the line-height to reduce spacing between lines */
+    }
+
+    .spacing {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  </style>
+  
+  
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">EPICLab</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="people.html">People</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="research.html">Research<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h3 class="page-headers">Our Award-Winning Papers</h3>
+
+  <!-- Research Section -->
+  <div class="photo-container">
+
+    <div class="photo">
+        <img src="media/research_graphics/do_i_belong.png"
+          alt="Do I Belong? Modeling Sense of Virtual Community Among Linux Kernel Contributors">
+        <div class="photo-overlay">
+          <div class="overlay-content">
+            <a href="https://doi.org/10.1109/ICSE48619.2023.00038" target="_blank">DOI</a>
+            <a href="publications/icse23-trinkenreich.pdf" target="_blank">PDF</a>
+            <div class="photo-caption">ICSE 2023 Distinguished Paper Award</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="photo">
+        <img src="media/research_graphics/recommending_tasks.png"
+          alt="Recommending Tasks to Newcomers in OSS Projects: How Do Mentors Handle It?">
+        <div class="photo-overlay">
+          <div class="overlay-content">
+            <a href="https://doi.org/10.1145/3412569.3412571" target="_blank">DOI</a>
+            <a href="publications/opensym20-balali.pdf" target="_blank">PDF</a>
+            <div class="photo-caption">OpenSym 2020 Best Paper Award</div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="photo">
+        <img src="media/research_graphics/biases.png"
+          alt="A Tale from the Trenches: Cognitive Biases and Software Development">
+        <div class="photo-overlay">
+          <div class="overlay-content">
+            <a href="https://doi.org/10.1145/3377811.3380330" target="_blank">DOI</a>
+            <a href="publications/icse20-chattopadhyay.pdf" target="_blank">PDF</a>
+            <div class="photo-caption">ICSE 2020 Distinguished Paper Award</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="photo">
+        <img src="media/research_graphics/tradeoffs.png"
+          alt="Trade-offs in Continuous Integration: Assurance, Security, and Flexibility">
+        <div class="photo-overlay">
+          <div class="overlay-content">
+            <a href="https://doi.org/10.1145/3106237.3106270" target="_blank">DOI</a>
+            <a href="publications/esecfse17-hilton.pdf" target="_blank">PDF</a>
+            <div class="photo-caption">ESEC/FSE 2017 Distinguished Paper Award</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="photo">
+        <img src="media/research_graphics/merge_conflicts.png"
+          alt="Software Practitioner Perspectives on Merge Conflicts and Resolutions">
+        <div class="photo-overlay">
+          <div class="overlay-content">
+            <a href="https://doi.org/10.1109/ICSME.2017.53" target="_blank">DOI</a>
+            <a href="publications/icsme17-mckee.pdf" target="_blank">PDF</a>
+            <div class="photo-caption">ICSME 2017 Distinguished Paper Award</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="photo">
+      <img src="media/research_graphics/global_stage.png"
+        alt="Hiring in the Global Stage: Profiles of Online Contributions">
+      <div class="photo-overlay">
+        <div class="overlay-content">
+          <a href="https://doi.org/10.1109/ICGSE.2016.35" target="_blank">DOI</a>
+          <a href="publications/icgse16-sarma.pdf" target="_blank">PDF</a>
+          <div class="photo-caption">ICGSE 2016 Best Paper Award</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img src="media/research_graphics/abundance.png"
+        alt="Foraging among an Overabundance of Similar Variants">
+      <div class="photo-overlay">
+        <div class="overlay-content">
+          <a href="https://doi.org/10.1145/2858036.2858469" target="_blank">DOI</a>
+          <a href="publications/chi16-ragavan.pdf" target="_blank">PDF</a>
+          <div class="photo-caption">CHI 2016 Best Paper Award</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img src="media/research_graphics/artifact_analysis.png"
+        alt="End-User Programmers and their Communities: An Artifact-based Analysis">
+      <div class="photo-overlay">
+        <div class="overlay-content">
+          <a href="https://doi.org/10.1109/ESEM.2011.23" target="_blank">DOI</a>
+          <a href="pdf_link_1" target="_blank">PDF</a>
+          <div class="photo-caption">ESEM 2011 Distinguished Paper Award</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more photos here -->
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>
+      Copyright © Anita Sarma 2023
+    </div>
+    <div class="contact-info">
+      <p>Kelley Engineering Center</p>
+      <p>2500 NW Monroe Ave</p>
+      <p>Corvallis, OR 97331 USA</p>
+      <p>anita.sarma@oregonstate.edu</p>
+    </div>
+  </div>
+
+</html>
