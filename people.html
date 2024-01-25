@@ -162,6 +162,60 @@
       margin-bottom: 50px;
     }
 
+    .left-column {
+      float: left;
+    }
+
+    .right-column {
+      float: right;
+    }
+
+    /* Add styles to adjust the width and spacing as needed */
+    .left-column, .right-column {
+      width: 50%;
+    }
+
+    /* Clear the float to prevent layout issues */
+    .split:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  
+    .alumni-container {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .split-left {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px; /* Adjust the overall padding if needed */
+      padding-left: 40px; /* Adjust the left padding as needed */
+    }
+
+    .split-left, .split-right {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      padding: 20px;
+      margin-top: 0px;
+      align-self: flex-start;
+      justify-content: right;
+    }
+
+    .inactive.alumni-container {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 
@@ -345,12 +399,11 @@
   <!-- End Current Members -->
 
 <!-- Alumni -->
-<section class="split" style="text-align: left;">
-  <div class="split-left alumni-container" style="width: 80%; margin-left: auto; margin-right: auto; padding: 20px; margin-top: 80px">
-    <h3 class="page-headers" style="padding-left: 10px;">Alumni</h3>
+<h3 class="page-headers" style="text-align: center; margin-top: 80px;">Alumni</h3>
+  <section class="split" style="text-align: left;">
+    <div class="split-left alumni-container left-column" style="width: 50%; margin-left: auto; margin-right: auto; padding-left: 20%;">
 
-        <!--PhD Alumni-->
-
+      <!--PhD Alumni-->
         <div class="alumni-container">
           <a class="inactive alumni-name">Mariam Guizani</a>
           <a class="inactive alumni-position">PhD, Oregon State University (2023) <br> Asssistant Professor, Queen's University, Canada</a>
@@ -463,9 +516,11 @@
           <a class="inactive alumni-name">Jianguo Wang</a>
           <a class="inactive alumni-position">MS, University of Nebraska, Lincoln (2012) <br> Lead Software Engineer, Grab</a>
           <a class="alumni-thesis"><a href="https://digitalcommons.unl.edu/computerscidiss/38/">Thesis</a></a>
-        </div>
+        </div>  
+    </div>
 
-        <!--Other Alumni-->
+    <!--Other Alumni-->
+    <div class="split-right alumni-container right-column" style="width: 50%; margin-left: auto; margin-right: auto; padding-right: 20%;">
 
         <div class="alumni-container">
           <a class="inactive alumni-name">Andrea Tongsak</a>
@@ -552,18 +607,23 @@
             <a class="inactive alumni-position">Undergraduate, University of Nebraska, Lincoln (2013)</a>
         </div>
 
-        <div class="inactive alumni-container">
+        <div class="alumni-container">
             <a class="inactive alumni-name">James Sukup</a>
             <a class="inactive alumni-position">Undergraduate, University of Nebraska, Lincoln (2012) <br> Software Engineer, EF Johnson Technologies, Inc.</a>
         </div>
+
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+</div>
+</div>
+</div>
+</div>
 
 
   <!-- High School Interns -->
-  <div class="split-right alumni-container" style="width: 80%; margin-left: auto; margin-right: auto; padding: 20px; margin-bottom: 80px">
-    <h3 class="page-headers" style="padding-left: 10px;">High School Interns</h3>
+  <div class="inactive alumni-container" style="width: 80%; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; margin-bottom: 80px;">
+    <h3 class="page-headers" style="text-align: center;">High School Interns</h3> 
 
         <div class="inactive alumni-container">
             <a class="inactive alumni-name">Jimena Noa Guierva</a>
@@ -595,11 +655,7 @@
             <span class="inactive alumni-position"><a href="https://www.saturdayacademy.org/ase">ASE Program</a> (2018)</span>
         </div>
         
-      </div>
-    </section>
   </div>
-</div>
-</div>
 
     <!-- Footer -->
     <div class="footer">
