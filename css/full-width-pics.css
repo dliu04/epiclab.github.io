@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
  */
 
- body {
+body {
   padding-top: 54px;
 }
 
@@ -156,30 +156,6 @@ a:visited {
   font-size: 18px;
 }
 
-/*
-.article .title #popup {
-  flex: 0 1 100%;
-  font-weight: bold;
-  font-size: 18px;
-  color:white;
-  
-}
-
-.article .title:hover #popup {
-  flex: 0 1 100%;
-  font-weight: bold;
-  font-size: 18px;
-  color: black;
-}
-
-.article .title:focus #popup {
-  flex: 0 1 100%;
-  font-weight: bold;
-  font-size: 18px;
-  color: black;
-}
-*/
-
 .page-content {
   min-height: calc(100vh - 70px);
 }
@@ -195,15 +171,6 @@ a:visited {
   align-items: center;
 }
 
-/* .footer-container {
-  padding-left: 10px;
-}
-
-.footer-text {
-  color: white;
-  font-size: 15px;
-  font-family: sans-serif;
-} */
 
 .hline {
   border-bottom: 2px solid #384452;
@@ -220,96 +187,6 @@ a:visited {
   display: block;
   position: relative;
   top: -115px; /* this is your offset */
-}
-
-
-***** Home Page Split Screen *******
-
-/*desktop split screen*/
-/* .split {
-  display: flex;
-  overflow: hidden;
-} */
-
-/*desktop split left screen*/
-/* .split-left {
-  width: 50%;
-  display: inline;
-  padding-top: 50px;
-  padding-right: 25px;
-  padding-left: 50px;
-  padding-bottom: 50px;
-  border-style: none;
-  border-color: #343a40;
-  border-width: 3px;
-} */
-
-/*desktop split right screen*/
-/* .split-right {
-  width: 50%;
-  padding-top: 50px;
-  padding-right: 50px;
-  padding-left: 25px;
-  padding-bottom: 50px;
-} */
-
-
-/*mobile display--no split screen*/
-/* @media (max-height: 700px), (max-width: 700px) {
-  .split {
-  display: flex;
-  flex-direction: column;
-  height: 100%; 
-  overflow: hidden;
-  width: 100%;
-  }
-  .split-left {
-    order: 1;
-    flex-wrap: nowrap;
-    width: 100%;
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 20px;
-  }
-  .split-right {
-    order: 2;
-    width: 100%;
-    padding-top: 20px;
-    padding-left: 50px;
-  }
-} */
-
-
-
-/****** Research Page Split Screen ********/
-
-/*desktop split screen*/
-.widget {
-  display: flex;
-  height: 100%; 
-  overflow: hidden;
-}
-
-
-/*desktop split left screen*/
-.widget-left {
-  width: 60%;
-  display: inline;
-  padding-top: 40px;
-  padding-right: 25px;
-  padding-bottom: 50px;
-  border-style: none;
-  border-color: #343a40;
-  border-width: 3px;
-}
-
-/*desktop split right screen*/
-.widget-right {
-  width: 40%;
-  padding-top: 40px;
-  padding-left: 5vw;
-  padding-bottom: 50px;
 }
 
 
@@ -494,30 +371,40 @@ ul.timeline > li:before {
   padding-top: 5px;
 }
 
-/*
-.name-box .site-link #popup {
-  font-weight: bold;
-  font-size: 18px;
-  color:white;
-}
-
-.name-box .site-link:hover #popup {
-  font-weight: bold;
-  font-size: 18px;
-  color: black;
-}
-
-.name-box .site-link:hover {
-  color: black;
-  font-weight: bold;
-  font-size: 1rem;  
-  line-height: 1.5;
-}
-*/
-
 .page-headers {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+
+/* Footers */
+.footer {
+  background-color: #343a40;
+  /* Use the desired background color */
+  color: #ffffff;
+  /* Use the desired text color */
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  text-align: right;
+  color: #999999;
+  /* Slightly darker color for the address */
+  font-size: 0.9em;
+  /* Smaller font size for the address */
+  margin-bottom: 5px;
+  /* Adjust the margin bottom as needed */
+  line-height: 0.7;
+  /* Adjust the line-height to reduce spacing between lines */
+}
+
+.spacing {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
