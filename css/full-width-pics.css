@@ -378,7 +378,7 @@ ul.timeline > li:before {
   color: #ffffff;
   /* Use the desired text color */
   padding: 20px;
-  text-align: center;
+  text-align: left;
   margin-top: auto;
   display: flex;
   justify-content: space-between;

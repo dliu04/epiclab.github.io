@@ -220,3 +220,36 @@ h2 {
 .carousel-indicators li.active {
     background-color: #555;
 }
+
+/* Media query for smaller viewports */
+@media only screen and (max-width: 768px) {
+    
+    .container-fluid img {
+        width: 100%; /* Make the banner full-width */
+        height: auto; /* Maintain the aspect ratio */
+        max-width: none; /* Remove the max-width constraint */
+    }
+    
+    .split {
+        flex-direction: column; /* Stack columns on top of each other */
+    }
+
+    .split-left,
+    .split-middle,
+    .split-right {
+        flex: 1;
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .carousel-container {
+        margin-bottom: 40px; /* Adjust margin for smaller screens */
+    }
+
+    .carousel {
+        width: 100%; /* Make the carousel container full-width */
+    }
+
+    .carousel-inner {
+        flex-wrap: wrap; /* Allow carousel items to wrap */
+    }
+}
