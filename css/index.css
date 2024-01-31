@@ -223,13 +223,13 @@ h2 {
 
 /* Media query for smaller viewports */
 @media only screen and (max-width: 768px) {
-    
+    /* Portrait orientation styles */
     .container-fluid img {
         width: 100%; /* Make the banner full-width */
         height: auto; /* Maintain the aspect ratio */
         max-width: none; /* Remove the max-width constraint */
     }
-    
+
     .split {
         flex-direction: column; /* Stack columns on top of each other */
     }
@@ -251,5 +251,30 @@ h2 {
 
     .carousel-inner {
         flex-wrap: wrap; /* Allow carousel items to wrap */
+    }
+
+    /* Landscape orientation styles */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        .split {
+            flex-direction: row; /* Revert to horizontal layout for landscape */
+        }
+
+        .split-left,
+        .split-middle,
+        .split-right {
+            padding: 40px; /* Revert to original padding for landscape */
+        }
+
+        .carousel-container {
+            margin-bottom: 80px; /* Revert to original margin for landscape */
+        }
+
+        .carousel {
+            width: 500px; /* Revert to original carousel width for landscape */
+        }
+
+        .carousel-inner {
+            flex-wrap: nowrap; /* Revert to original flex-wrap for landscape */
+        }
     }
 }
