@@ -14,12 +14,15 @@
   <link href="css/full-width-pics.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-
   <!-- Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   
+  <!-- Other/Custom JavaScript -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="js/recentPapers.js"></script>
+
   <!-- Favicon -->
   <link rel="icon" href="media/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
@@ -92,6 +95,7 @@
       flex: 1;
       padding: 40px;
       text-align: center;
+      font-size: 0.8em;
     }
 
     .split-left {
@@ -414,7 +418,7 @@
           </div>
         </div>
 
-        <!-- Add more -->
+        <!-- You can add more here~ -->
 
       </div>
     </div>
@@ -449,61 +453,6 @@
       <p>anita.sarma@oregonstate.edu</p>
     </div>
   </div>
-  
-<!-- Script for Recent Papers -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script>
-  // Function to dynamically fetch and update the "News" section
-  async function updateNewsSection() {
-    try {
-      const response = await fetch('publications.html');
-      const htmlContent = await response.text();
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(htmlContent, 'text/html');
-
-      // Extract information from publications
-      const publications = doc.querySelectorAll('.article');
-      const newsContent = [];
-
-      // Limit to the first three publications
-      for (let i = 1; i < 3 && i < publications.length; i++) {
-        const publication = publications[i];
-        const conferenceLink = publication.querySelector('a[href^="https://conf.researchr.org"]');
-        const conferenceName = conferenceLink ? conferenceLink.textContent : 'Conference not available';
-        const title = publication.querySelector('.title').textContent;
-        const authors = publication.querySelector('.author').textContent;
-        const doiElement = publication.querySelector('a[href^="https://doi.org"]');
-        const doi = doiElement ? doiElement.getAttribute('href') : 'DOI not available';
-        const pdfElement = publication.querySelector('a[href$=".pdf"]');
-        const pdfLink = pdfElement ? pdfElement.getAttribute('href') : null;
-
-        // Create a hyperlink button for the DOI
-        const doiButton = `<button class="doi-button" onclick="window.open('${doi}', '_blank')">View DOI</button>`;
-
-        // Create a "View PDF" button if a PDF link is available
-        const pdfButton = pdfLink ? `<button class="pdf-button" onclick="window.open('${pdfLink}', '_blank')">View PDF</button>` : '';
-
-        // Format the news content with a border
-        const publicationInfo = `<div class="publication-container">
-                                  <span class="conference">${conferenceName}</span>
-                                  <strong>${title}</strong><br>
-                                  <span class="author">${authors}</span><br>
-                                  ${doiButton}${pdfButton}
-                                </div>`;
-
-        newsContent.push(publicationInfo);
-      }
-
-      // Update the content in the "News" section
-      document.getElementById('news-content').innerHTML = newsContent.join('');
-    } catch (error) {
-      console.error('Error fetching and updating news section:', error);
-    }
-  }
-
-  // Call the function to fetch and update the "News" section when the page loads
-  document.addEventListener('DOMContentLoaded', updateNewsSection);
-</script>
 
 <!-- Style for the buttons and container -->
 <style>
