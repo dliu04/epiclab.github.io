@@ -1,167 +1,171 @@
 .page-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    text-align: left;
-  }
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: left;
+}
 
+.page-container .page-content {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+/* Optional: Add media queries for responsiveness */
+@media (max-width: 768px) {
   .page-container .page-content {
-    padding-left: 7%;
-    padding-right: 7%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
+}
 
-  /* Optional: Add media queries for responsiveness */
-  @media (max-width: 768px) {
-    .page-container .page-content {
-      padding-left: 5%;
-      padding-right: 5%;
-    }
-  }
+.page-container .curr-member-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the content */
+}
 
-  .page-container .curr-member-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the content */
-  }
+.page-container .people-container {
+  flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed, minus margin */
+  margin: 10px; /* Adjust the margin as needed */
+  text-align: center;
+}
 
-  .page-container .people-container {
-    flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed, minus margin */
-    margin: 10px; /* Adjust the margin as needed */
-    text-align: center;
-  }
+/* Adjust order for one person */
+.page-container .curr-member-container:only-child .people-container {
+  order: -1; /* Left */
+}
 
-  /* Adjust order for one person */
-  .page-container .curr-member-container:only-child .people-container {
-    order: -1; /* Left */
-  }
+/* Adjust order for two people */
+.page-container .curr-member-container:nth-child(2) .people-container:nth-child(1) {
+  order: -2; /* Left */
+}
 
-  /* Adjust order for two people */
-  .page-container .curr-member-container:nth-child(2) .people-container:nth-child(1) {
-    order: -2; /* Left */
-  }
+.page-container .curr-member-container:nth-child(2) .people-container:nth-child(2) {
+  order: -1; /* Middle */
+}
 
-  .page-container .curr-member-container:nth-child(2) .people-container:nth-child(2) {
-    order: -1; /* Middle */
-  }
+/* Adjust order for three people */
+.page-container .curr-member-container:nth-child(3) .people-container:nth-child(1) {
+  order: -3; /* Left */
+}
 
-  /* Adjust order for three people */
-  .page-container .curr-member-container:nth-child(3) .people-container:nth-child(1) {
-    order: -3; /* Left */
-  }
+.page-container .curr-member-container:nth-child(3) .people-container:nth-child(2) {
+  order: -2; /* Middle */
+}
 
-  .page-container .curr-member-container:nth-child(3) .people-container:nth-child(2) {
-    order: -2; /* Middle */
-  }
+.page-container .curr-member-container:nth-child(3) .people-container:nth-child(3) {
+  order: -1; /* Right */
+}
 
-  .page-container .curr-member-container:nth-child(3) .people-container:nth-child(3) {
-    order: -1; /* Right */
-  }
+.page-container .name-box {
+  font-size: 18px;
+  text-align: center;
+}
 
-  .page-container .name-box {
-    font-size: 18px;
-    text-align: center;
-  }
+.page-container .name-box a.site-link {
+  font-size: 20px;
+}
 
-  .page-container .name-box a.site-link {
-    font-size: 20px;
-  }
+.page-container .profileimg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .page-container .profileimg {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.page-container .people-link {
+  margin-bottom: 0px;
+}
 
-  .page-container .people-position {
-    font-style: italic;
-    margin-top: 5px;
-    margin-bottom: -10px;
-  }
+.page-container .people-position {
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: -10px;
+}
 
-  .page-container .page-headers {
-    margin-top: 10px;
-    text-align: center;
-  }
+.page-container .page-headers {
+  margin-top: 10px;
+  text-align: center;
+}
 
-  .page-container .footer {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.page-container .footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .page-container .contact-info {
-    text-align: right;
-    color: #999999;
-    font-size: 0.9em;
-    margin-bottom: 5px;
-    line-height: 0.7;
-  }
+.page-container .contact-info {
+  text-align: right;
+  color: #999999;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  line-height: 0.7;
+}
 
-  .page-container .spacing {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+.page-container .spacing {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
-  .left-column {
-    float: left;
-  }
+.left-column {
+  float: left;
+}
 
-  .right-column {
-    float: right;
-  }
+.right-column {
+  float: right;
+}
 
-  /* Add styles to adjust the width and spacing as needed */
-  .left-column, .right-column {
-    width: 50%;
-  }
+/* Add styles to adjust the width and spacing as needed */
+.left-column, .right-column {
+  width: 50%;
+}
 
-  /* Clear the float to prevent layout issues */
-  .split:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+/* Clear the float to prevent layout issues */
+.split:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .alumni-container {
-    width: 100%;
-    padding: 20px;
-  }
+.alumni-container {
+  width: 100%;
+  padding: 20px;
+}
 
-  .split-left {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px; /* Adjust the overall padding if needed */
-    padding-left: 40px; /* Adjust the left padding as needed */
-  }
+.split-left {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; /* Adjust the overall padding if needed */
+  padding-left: 40px; /* Adjust the left padding as needed */
+}
 
-  .split-left, .split-right {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    padding: 20px;
-    margin-top: 0px;
-    align-self: flex-start;
-    justify-content: right;
-  }
+.split-left, .split-right {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 20px;
+  margin-top: 0px;
+  align-self: flex-start;
+  justify-content: right;
+}
 
-  .inactive.alumni-container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin-bottom: 10px;
-  }
+.inactive.alumni-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
