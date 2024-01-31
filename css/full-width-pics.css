@@ -102,10 +102,6 @@ body {
   justify-content: flex-start;
 }
 
-/*.name-box{
-  display: flex;
-  flex-direction: column;
-}*/
 
 .profileimg {
   width:262px;
@@ -113,9 +109,6 @@ body {
   margin-right:50px;
   object-fit: cover;
   object-position: top;
-  /*height: 100%;
-  padding-top: 100%; 1:1 Aspect Ratio
-  position: relative;*/
 }
 
 
