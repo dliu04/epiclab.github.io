@@ -8,7 +8,7 @@ async function updateNewsSection() {
       const publications = doc.querySelectorAll('.article');
       const newsContent = [];
   
-      for (let i = 1; i < 3 && i < publications.length; i++) {
+      for (let i = 1; i < 2 && i < publications.length; i++) {
         const publication = publications[i];
         const conferenceLink = publication.querySelector('a[href^="https://conf.researchr.org"]');
         const conferenceName = conferenceLink ? conferenceLink.textContent : 'Conference not available';
