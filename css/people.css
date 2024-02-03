@@ -1,5 +1,14 @@
 :root {
+  --CrimsonOrange: #c76b2e;
+  --Tapioca: #ffc39a; 
+  --BabyBeige: #fff7ee; 
   --SkinBeige: #fce3ca; 
+  --LightOrange: #fcddbe; 
+  --DarkerOrange: #a4551c;
+  --WarmGray: #7e7e7e;
+  --SoftPink: #f5c3b4;
+  --MutedBlue: #a0c5d8;
+  --SubtleGreen: #cee5cb;
 }
 
 #people-body {

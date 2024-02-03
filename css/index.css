@@ -2,7 +2,7 @@
 :root {
     --CrimsonOrange: #c76b2e;
     --Tapioca: #ffc39a; 
-    --BabyBeige: #fff2e4; 
+    --BabyBeige: #fff7ee; 
     --SkinBeige: #fce3ca; 
     --LightOrange: #fcddbe; 
     --DarkerOrange: #a4551c;
@@ -115,7 +115,7 @@ h2 {
 /* Photo Carousel Styles */
 
 .featured-papers{
-    background-color: var(--SubtleGreen);
+    background-color: var(--SoftPink);
 }
 
 .photo-carousel {
