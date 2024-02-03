@@ -18,6 +18,7 @@
 .page-headers {
     text-align: center;
     margin-top: 30px; /* Adjust the top margin as needed */ 
+    margin-bottom: -40px;
   }
 
   .photo-container {
