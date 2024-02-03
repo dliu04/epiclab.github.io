@@ -1,3 +1,36 @@
+/* Main Color Palette */
+:root {
+    --CrimsonOrange: #c76b2e;
+    --Tapioca: #ffc39a; 
+    --BabyBeige: #fdead6; 
+    --SkinBeige: #fce3ca; 
+    --LightOrange: #fcddbe; 
+    --DarkerOrange: #a4551c;
+    --WarmGray: #7e7e7e;
+    --SoftPink: #f5c3b4;
+    --MutedBlue: #a0c5d8;
+    --SubtleGreen: #cee5cb;
+  }
+
+
+/* NavBar Recolor */
+.navbar {
+    background-color: var(--CrimsonOrange) !important;
+  }
+
+/* Banner Styles */
+.banner {
+    background-color: var(--Tapioca);
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    max-height: 175px; /* Set the maximum height for the logo */
+    width: auto; /* Allow the width to adjust while maintaining aspect ratio */
+}
+
 /* Style for Three Column Layout */
 .split {
     display: flex;
@@ -17,15 +50,15 @@
 }
 
 .split-left {
-    background-color: #f2f2f2;
+    background-color: var(--BabyBeige);
 }
 
 .split-middle {
-    background-color: #e6e6e6;
+    background-color: var(--SkinBeige);
 }
 
 .split-right {
-    background-color: #d9d9d9;
+    background-color: var(--LightOrange);
 }
 
 h2 {
@@ -80,6 +113,11 @@ h2 {
 
   
 /* Photo Carousel Styles */
+
+.featured-papers{
+    background-color: var(--SubtleGreen);
+}
+
 .photo-carousel {
     overflow: hidden;
     white-space: nowrap;
@@ -91,7 +129,8 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 80px; /* Adjust the margin-bottom to create space between carousel and next section */
+    margin-bottom: 80px;
+    
 }
 
 .carousel {
@@ -223,6 +262,7 @@ h2 {
 
 /* Media query for smaller viewports */
 @media only screen and (max-width: 768px) {
+    
     /* Portrait orientation styles */
     .container-fluid img {
         width: 100%; /* Make the banner full-width */
@@ -278,3 +318,4 @@ h2 {
         }
     }
 }
+

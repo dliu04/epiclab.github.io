@@ -1,8 +1,15 @@
+:root {
+  --CrimsonOrange: #c76b2e;
+  --Tapioca: #ffc39a; 
+  --BabyBeige: #fdead6; 
+  --SkinBeige: #fce3ca; 
+  --LightOrange: #fcddbe; 
+}
 
 
 /* Footers */
 .footer {
-    background-color: #343a40;
+    background-color: var(--CrimsonOrange);
     /* Use the desired background color */
     color: #ffffff;
     /* Use the desired text color */
@@ -16,7 +23,7 @@
   
   .contact-info {
     text-align: right;
-    color: #999999;
+    color: #864b21;
     /* Slightly darker color for the address */
     font-size: 0.9em;
     /* Smaller font size for the address */
