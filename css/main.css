@@ -6,6 +6,9 @@
   --LightOrange: #fcddbe; 
 }
 
+.navbar {
+  background-color: var(--CrimsonOrange) !important;
+}
 
 /* Footers */
 .footer {

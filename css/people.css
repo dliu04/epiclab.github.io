@@ -1,3 +1,11 @@
+:root {
+  --SkinBeige: #fce3ca; 
+}
+
+#people-body {
+  background-color: var(--SkinBeige);
+}
+
 .page-container {
   max-width: 1300px;
   margin: 0 auto;
@@ -138,6 +146,7 @@
 .alumni-container {
   width: 100%;
   padding: 20px;
+  
 }
 
 .split-left {
