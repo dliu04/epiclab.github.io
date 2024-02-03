@@ -78,9 +78,9 @@ h2 {
 /* Style for Recent Papers */
 .doi-button, .pdf-button {
     padding: 10px;
-    background-color: #747373;
+    background-color: #e77865;
     color: #ffffff;
-    border: 1px solid #747373;
+    border: 1px solid #e77865;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px; /* Adjust the margin between buttons */
@@ -88,12 +88,12 @@ h2 {
 }
 
   .pdf-button {
-    background-color: #606060; /* Customize PDF button color */
-    border: 1px solid #606060;
+    background-color: #e79965; /* Customize PDF button color */
+    border: 1px solid #e79965;
   }
 
   .publication-container {
-    border: 1px solid #888888; /* Border to separate papers */
+    border: 1px solid var(--CrimsonOrange); /* Border to separate papers */
     padding: 15px; /* Padding within the container */
     margin-bottom: 20px; /* Margin between papers */
   }
