@@ -1,7 +1,7 @@
 :root {
   --CrimsonOrange: #c76b2e;
   --Tapioca: #ffc39a; 
-  --BabyBeige: #fff7ee; 
+  --BabyBeige: #fff0e0; 
   --SkinBeige: #fce3ca; 
   --LightOrange: #fcddbe; 
   --DarkerOrange: #a4551c;
@@ -12,7 +12,7 @@
 }
 
 #people-body {
-  background-color: var(--SkinBeige);
+  background-color: var(--BabyBeige);
 }
 
 .page-container {

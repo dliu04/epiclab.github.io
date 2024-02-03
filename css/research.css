@@ -1,7 +1,7 @@
 :root {
     --CrimsonOrange: #c76b2e;
     --Tapioca: #ffc39a; 
-    --BabyBeige: #fff7ee; 
+    --BabyBeige: #fff0e0; 
     --SkinBeige: #fce3ca; 
     --LightOrange: #fcddbe; 
     --DarkerOrange: #a4551c;
@@ -10,6 +10,10 @@
     --MutedBlue: #a0c5d8;
     --SubtleGreen: #cee5cb;
   }
+
+#research-body{
+    background-color: var(--BabyBeige);
+}
 
 .page-headers {
     text-align: center;

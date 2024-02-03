@@ -1,7 +1,7 @@
 :root {
   --CrimsonOrange: #c76b2e;
   --Tapioca: #ffc39a; 
-  --BabyBeige: #fff7ee; 
+  --BabyBeige: #fff0e0; 
   --SkinBeige: #fce3ca; 
   --LightOrange: #fcddbe; 
   --DarkerOrange: #a4551c;
@@ -13,6 +13,11 @@
 
 .navbar {
   background-color: var(--CrimsonOrange) !important;
+}
+
+/* For Publications Page */
+.page-content{
+  background-color: var(--BabyBeige);
 }
 
 /* Footers */
