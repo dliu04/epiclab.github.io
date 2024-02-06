@@ -1,3 +1,36 @@
+/* Main Color Palette */
+:root {
+    --CrimsonOrange: #c76b2e;
+    --Tapioca: #edb58f; 
+    --BabyBeige: #fff0e0; 
+    --SkinBeige: #fce3ca; 
+    --LightOrange: #fcddbe; 
+    --DarkerOrange: #a4551c;
+    --WarmGray: #7e7e7e;
+    --SoftPink: #f5c3b4;
+    --MutedBlue: #a0c5d8;
+    --SubtleGreen: #cee5cb;
+  }
+
+
+/* NavBar Recolor */
+.navbar {
+    background-color: var(--CrimsonOrange) !important;
+  }
+
+/* Banner Styles */
+.banner {
+    background-color: var(--Tapioca);
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    max-height: 175px; /* Set the maximum height for the logo */
+    width: auto; /* Allow the width to adjust while maintaining aspect ratio */
+}
+
 /* Style for Three Column Layout */
 .split {
     display: flex;
@@ -17,15 +50,15 @@
 }
 
 .split-left {
-    background-color: #f2f2f2;
+    background-color: var(--BabyBeige);
 }
 
 .split-middle {
-    background-color: #e6e6e6;
+    background-color: var(--SkinBeige);
 }
 
 .split-right {
-    background-color: #d9d9d9;
+    background-color: var(--LightOrange);
 }
 
 h2 {
@@ -45,9 +78,9 @@ h2 {
 /* Style for Recent Papers */
 .doi-button, .pdf-button {
     padding: 10px;
-    background-color: #747373;
+    background-color: #e77865;
     color: #ffffff;
-    border: 1px solid #747373;
+    border: 1px solid #e77865;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px; /* Adjust the margin between buttons */
@@ -55,12 +88,12 @@ h2 {
 }
 
   .pdf-button {
-    background-color: #606060; /* Customize PDF button color */
-    border: 1px solid #606060;
+    background-color: #e79965; /* Customize PDF button color */
+    border: 1px solid #e79965;
   }
 
   .publication-container {
-    border: 1px solid #888888; /* Border to separate papers */
+    border: 1px solid var(--CrimsonOrange); /* Border to separate papers */
     padding: 15px; /* Padding within the container */
     margin-bottom: 20px; /* Margin between papers */
   }
@@ -80,6 +113,11 @@ h2 {
 
   
 /* Photo Carousel Styles */
+
+.featured-papers{
+    background-color: var(--SoftPink);
+}
+
 .photo-carousel {
     overflow: hidden;
     white-space: nowrap;
@@ -91,7 +129,8 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 80px; /* Adjust the margin-bottom to create space between carousel and next section */
+    margin-bottom: 80px;
+    
 }
 
 .carousel {
@@ -224,12 +263,13 @@ h2 {
 /* Media query for smaller viewports */
 @media only screen and (max-width: 768px) {
     
+    /* Portrait orientation styles */
     .container-fluid img {
         width: 100%; /* Make the banner full-width */
         height: auto; /* Maintain the aspect ratio */
         max-width: none; /* Remove the max-width constraint */
     }
-    
+
     .split {
         flex-direction: column; /* Stack columns on top of each other */
     }
@@ -252,4 +292,30 @@ h2 {
     .carousel-inner {
         flex-wrap: wrap; /* Allow carousel items to wrap */
     }
+
+    /* Landscape orientation styles */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+        .split {
+            flex-direction: row; /* Revert to horizontal layout for landscape */
+        }
+
+        .split-left,
+        .split-middle,
+        .split-right {
+            padding: 40px; /* Revert to original padding for landscape */
+        }
+
+        .carousel-container {
+            margin-bottom: 80px; /* Revert to original margin for landscape */
+        }
+
+        .carousel {
+            width: 500px; /* Revert to original carousel width for landscape */
+        }
+
+        .carousel-inner {
+            flex-wrap: nowrap; /* Revert to original flex-wrap for landscape */
+        }
+    }
 }
+

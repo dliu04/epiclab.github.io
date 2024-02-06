@@ -16,110 +16,13 @@
   <!-- Custom styles for this template -->
   <link href="css/full-width-pics.css" rel="stylesheet">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/research.css" rel="stylesheet">
 
   <!-- Favicon -->
   <link rel="icon" href="media/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
 
-  <style>
-
-    .page-headers {
-      text-align: center;
-      margin-top: 30px; /* Adjust the top margin as needed */ 
-    }
-
-    .photo-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 20px; /* Adjust margin between rows of photos */
-      padding: 40px; /* Add padding to the left and right of the container */
-    }
-
-  
-    .photo {
-      position: relative;
-      margin: 10px; /* Adjust margin between photos */
-      box-sizing: border-box; /* Include padding and borders in the element's total width and height */
-      width: calc(33.333% - 20px); /* Adjust width and margin between photos */
-      max-width: 350px; /* Set a maximum width for the photos */
-      min-width: 300px; /* Set a minimum width for the photos */
-    }
-  
-    .photo img {
-      width: 100%; /* Ensure the image takes up the full width of the container */
-      height: auto; /* Maintain aspect ratio */
-      max-height: 350px; /* Set a maximum height as needed */
-      object-fit: cover;
-      transition: filter 0.3s ease-in-out;
-    }
-  
-    .photo-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-  
-    .photo:hover img {
-      filter: brightness(70%); /* Adjust the brightness level */
-    }
-  
-    .photo:hover .photo-overlay {
-      opacity: 1;
-    }
-  
-    .overlay-content {
-      text-align: center;
-      color: #ffffff;
-    }
-  
-    .overlay-content a {
-      display: inline-block;
-      padding: 10px;
-      background-color: #747373;
-      color: #ffffff;
-      border: 1px solid #747373;
-      border-radius: 5px;
-      margin: 5px;
-      text-decoration: none;
-    }
-  
-    .photo-caption {
-      font-style: italic;
-      font-size: 12px;
-      color: #ffffff;
-      margin-top: 5px;
-    }
-  
-    /* Media query for narrow screens */
-    @media screen and (max-width: 768px) {
-      .photo-container {
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .photo {
-        width: calc(100% - 20px); /* Full width for narrow screens */
-        margin: 10px 0; /* Adjust margin between photos */
-      }
-    }
-  </style>
-  
-  
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -148,6 +51,7 @@
     </div>
   </nav>
 
+  <body id="research-body">
   <h3 class="page-headers">Our Award-Winning Papers</h3>
 
   <!-- Research Section -->
@@ -251,6 +155,8 @@
 
     <!-- Add more photos here -->
   </div>
+</body>
+
 
   <!-- Footer -->
   <div class="footer">
@@ -264,5 +170,12 @@
       <p>anita.sarma@oregonstate.edu</p>
     </div>
   </div>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </html>

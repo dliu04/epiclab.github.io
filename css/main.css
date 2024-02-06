@@ -1,0 +1,52 @@
+:root {
+  --CrimsonOrange: #c76b2e;
+  --Tapioca: #ffc39a; 
+  --BabyBeige: #fff0e0; 
+  --SkinBeige: #fce3ca; 
+  --LightOrange: #fcddbe; 
+  --DarkerOrange: #a4551c;
+  --WarmGray: #7e7e7e;
+  --SoftPink: #f5c3b4;
+  --MutedBlue: #a0c5d8;
+  --SubtleGreen: #cee5cb;
+}
+
+.navbar {
+  background-color: var(--CrimsonOrange) !important;
+}
+
+/* For Publications Page */
+.page-content{
+  background-color: var(--BabyBeige);
+}
+
+/* Footers */
+.footer {
+    background-color: var(--CrimsonOrange);
+    /* Use the desired background color */
+    color: #ffffff;
+    /* Use the desired text color */
+    padding: 20px;
+    text-align: left;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contact-info {
+    text-align: right;
+    color: #864b21;
+    /* Slightly darker color for the address */
+    font-size: 0.9em;
+    /* Smaller font size for the address */
+    margin-bottom: 5px;
+    /* Adjust the margin bottom as needed */
+    line-height: 0.7;
+    /* Adjust the line-height to reduce spacing between lines */
+  }
+  
+  .spacing {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }

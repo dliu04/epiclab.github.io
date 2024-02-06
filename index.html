@@ -14,9 +14,9 @@
     <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
 
     <!-- Custom styles for this template -->
-    <link href="css/full-width-pics.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 
 <!-- Styles -->
@@ -27,12 +27,11 @@
         flex-direction: column;
         min-height: 100vh;
         background-color: rgb(202, 202, 202);
-        /* Add the background color from your stylesheet */
     }
 
     .page-headers {
         text-align: center;
-        margin-top: 35px;
+        margin-top: 35px; 
     }
 
     .wrapper {
@@ -67,11 +66,13 @@
   </div>
 </nav>
 
-  <!-- Banner Section -->
-  <div class="container-fluid p-0">
-    <img src="media/epiclab_banner.svg" class="img-fluid" style="width: 100%; height: auto;">
-  </div>
+<!-- Banner -->
+<div class="banner">
+  <img src="media/epiclab_logo.svg" alt="EPICLab Logo" class="logo">
+</div>
 
+
+<!-- Three Column Section -->
 <body>
   <section class="split">
     <div class="split-left">
@@ -92,7 +93,9 @@
       <p class="lead" id="news-content"></p>
     </div>
   </section>
-  
+
+<section class="featured-papers">
+  <!-- Featured Carousel Section -->
   <h3 class="page-headers">Featured Papers</h3>
 
   <div class="carousel-container">
@@ -199,15 +202,15 @@
           </div>
         </div>
 
-        <!-- You can add more here~ -->
+        <!-- You can add more here- remember to update li elements -->
 
       </div>
     </div>
 
     <!-- External carousel control buttons -->
     <button class="external-carousel-control" onclick="nextSlide()">❯</button>
-
   </div>
+</section>
   
 
   <!-- Carousel Move Script -->
@@ -235,7 +238,7 @@
   </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
