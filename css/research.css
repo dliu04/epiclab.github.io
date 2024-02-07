@@ -93,15 +93,19 @@
     margin-top: 5px;
   }
 
-  /* Media query for narrow screens */
   @media screen and (max-width: 768px) {
     .photo-container {
-      flex-direction: column;
-      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; 
+      align-items: center; 
+      margin: 20px; 
+      padding: 40px;
     }
-
+  
     .photo {
-      width: calc(100% - 20px); /* Full width for narrow screens */
-      margin: 10px 0; /* Adjust margin between photos */
+      width: calc(50% - 20px); 
+      margin: 10px; 
     }
   }
+  

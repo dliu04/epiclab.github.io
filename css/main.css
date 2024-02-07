@@ -50,3 +50,19 @@
     margin-top: 50px;
     margin-bottom: 50px;
   }
+
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      background-color: var(--CrimsonOrange) !important;
+    }
+    
+    .page-content {
+      background-color: var(--BabyBeige);
+    }
+    
+    .spacing {
+      margin-top: 30px; 
+      margin-bottom: 30px; 
+    }
+  }
+  

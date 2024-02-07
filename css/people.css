@@ -187,3 +187,18 @@
   padding: 20px;
   margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+  .page-container .page-content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .split-left,
+  .split-right {
+    width: 100% !important; /* Change width to 100% for mobile devices */
+    padding: 20px !important; /* Adjust padding as needed */
+    padding-left: 40px !important; /* Adjust left padding as needed */
+    margin-bottom: 10px !important;
+  }
+}

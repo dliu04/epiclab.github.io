@@ -1,250 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
     <title>EPICLab</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon" />
 
     <!-- Custom styles for this template -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-</head>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
 
-<!-- Styles -->
-<style>
+  <!-- Styles -->
+  <style>
     body {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        background-color: rgb(202, 202, 202);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: rgb(202, 202, 202);
     }
 
     .page-headers {
-        text-align: center;
-        margin-top: 35px; 
+      text-align: center;
+      margin-top: 35px;
     }
 
     .wrapper {
-        flex: 1;
+      flex: 1;
     }
-</style>
+  </style>
 
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">EPICLab</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="people.html">People</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="research.html">Research</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="publications.html">Publications</a>
-        </li>
-      </ul>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">EPICLab</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="people.html">People</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="research.html">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="media/epiclab_logo.svg" alt="EPICLab Logo" class="logo" />
   </div>
-</nav>
 
-<!-- Banner -->
-<div class="banner">
-  <img src="media/epiclab_logo.svg" alt="EPICLab Logo" class="logo">
-</div>
-
-
-<!-- Three Column Section -->
-<body>
-  <section class="split">
-    <div class="split-left">
-      <img src="media/icons/flask-icon.svg" alt="Flask SVG" height="60px" class="svg-icon">
-      <h2>Mission</h2>
-      <p class="lead"><br><strong>EPICLabs</strong> stands for <strong></strong>End user-centric, Productivity, Inclusion and Cognition. Our work follows an interdisciplinary approach of performing empirical user studies to understand the problems and barriers that developers currently face, designing and developing interactive tools to make developers and teams more efficient, and formative and summative user studies to evaluate the benefits of the tools. <br> <br> Our research approach is <strong>interdisciplinary, leveraging research in data mining, program analysis, software design, software visualization, and human-computer interaction.</strong></p>
-    </div>
-  
-    <div class="split-middle">
-      <img src="media/icons/people-icon.svg" alt="People SVG" height="60px" class="svg-icon"> 
-      <h2>Join Us</h2>
-      <p class="lead"><br>Interested in our mission? We're seeking enthusiastic individuals passionate about exploring user experiences through user studies, tool development, and interdisciplinary research. <br> <br> <br> If you're interested joining us, contact <strong><a href="mailto:anita.sarma@oregonstate.edu">Anita Sarma</a></strong> to explore your options!</p>
-    </div>
-  
-    <div class="split-right" id="news-section">
-      <img src="media/icons/publications-icon.svg" alt="Feed SVG" height="60px" class="svg-icon">
-      <h2>Recent Publications</h2> <br>
-      <p class="lead" id="news-content"></p>
-    </div>
-  </section>
-
-<section class="featured-papers">
-  <!-- Featured Carousel Section -->
-  <h3 class="page-headers">Featured Papers</h3>
-
-  <div class="carousel-container">
-    <button class="external-carousel-control" onclick="prevSlide()">❮</button>
-    <div id="awardCarousel" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval="4000">
-      <div class="carousel-indicators">
-        <li data-target="#awardCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#awardCarousel" data-slide-to="1"></li>
-        <li data-target="#awardCarousel" data-slide-to="2"></li>
-        <li data-target="#awardCarousel" data-slide-to="3"></li>
-        <li data-target="#awardCarousel" data-slide-to="4"></li>
-        <li data-target="#awardCarousel" data-slide-to="5"></li>
-        <li data-target="#awardCarousel" data-slide-to="6"></li>
-        <li data-target="#awardCarousel" data-slide-to="7"></li>
-        <!-- Add more li elements for additional slides as needed -->
+  <!-- Three Column Section -->
+  <body>
+    <section class="split">
+      <div class="split-left">
+        <img
+          src="media/icons/flask-icon.svg"
+          alt="Flask SVG"
+          height="60px"
+          class="svg-icon"
+        />
+        <h2>Mission</h2>
+        <p class="lead">
+          <br /><strong>EPICLabs</strong> stands for <strong></strong>End
+          user-centric, Productivity, Inclusion and Cognition. Our work follows
+          an interdisciplinary approach of performing empirical user studies to
+          understand the problems and barriers that developers currently face,
+          designing and developing interactive tools to make developers and
+          teams more efficient, and formative and summative user studies to
+          evaluate the benefits of the tools. <br />
+          <br />
+          Our research approach is
+          <strong
+            >interdisciplinary, leveraging research in data mining, program
+            analysis, software design, software visualization, and
+            human-computer interaction.</strong
+          >
+        </p>
       </div>
 
-      <div class="carousel-inner">
-        <div class="carousel-item active" id="carousel-item-1">
-            <img src="media/research_graphics/do_i_belong.png" alt="Do I Belong? Modeling Sense of Virtual Community Among Linux Kernel Contributors">
-            <div class="carousel-buttons">
-                <a href="https://doi.org/10.1109/ICSE48619.2023.00038" target="_blank">DOI</a>
-                <a href="publications/icse23-trinkenreich.pdf" target="_blank">PDF</a>
-            </div>
-            <div class="carousel-caption">
+      <div class="split-middle">
+        <img
+          src="media/icons/people-icon.svg"
+          alt="People SVG"
+          height="60px"
+          class="svg-icon"
+        />
+        <h2>Join Us</h2>
+        <p class="lead">
+          <br />Interested in our mission? We're seeking enthusiastic
+          individuals passionate about exploring user experiences through user
+          studies, tool development, and interdisciplinary research. <br />
+          <br />
+          <br />
+          If you're interested joining us, contact
+          <strong
+            ><a href="mailto:anita.sarma@oregonstate.edu"
+              >Anita Sarma</a
+            ></strong
+          >
+          to explore your options!
+        </p>
+      </div>
+
+      <div class="split-right" id="news-section">
+        <img
+          src="media/icons/publications-icon.svg"
+          alt="Feed SVG"
+          height="60px"
+          class="svg-icon"
+        />
+        <h2>Recent Publications</h2>
+        <br />
+        <p class="lead" id="news-content"></p>
+      </div>
+    </section>
+
+    <section class="featured-papers">
+      <!-- Featured Carousel Section -->
+      <h3 class="page-headers">Featured Papers</h3>
+
+      <div class="carousel-container">
+        <button class="external-carousel-control" onclick="prevSlide()">
+          ❮
+        </button>
+        <div
+          id="awardCarousel"
+          class="carousel slide"
+          data-ride="carousel"
+          data-pause="hover"
+          data-interval="4000"
+        >
+          <div class="carousel-indicators">
+            <li
+              data-target="#awardCarousel"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#awardCarousel" data-slide-to="1"></li>
+            <li data-target="#awardCarousel" data-slide-to="2"></li>
+            <li data-target="#awardCarousel" data-slide-to="3"></li>
+            <li data-target="#awardCarousel" data-slide-to="4"></li>
+            <li data-target="#awardCarousel" data-slide-to="5"></li>
+            <li data-target="#awardCarousel" data-slide-to="6"></li>
+            <li data-target="#awardCarousel" data-slide-to="7"></li>
+            <!-- Add more li elements for additional slides as needed -->
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active" id="carousel-item-1">
+              <img
+                src="media/research_graphics/do_i_belong.png"
+                alt="Do I Belong? Modeling Sense of Virtual Community Among Linux Kernel Contributors"
+              />
+              <div class="carousel-buttons">
+                <a
+                  href="https://doi.org/10.1109/ICSE48619.2023.00038"
+                  target="_blank"
+                  >DOI</a
+                >
+                <a href="publications/icse23-trinkenreich.pdf" target="_blank"
+                  >PDF</a
+                >
+              </div>
+              <div class="carousel-caption">
                 <p class="photo-caption">ICSE 2023 Distinguished Paper Award</p>
+              </div>
             </div>
+
+            <div class="carousel-item" id="carousel-item-2">
+              <img
+                src="media/research_graphics/recommending_tasks.png"
+                alt="Recommending Tasks to Newcomers in OSS Projects: How Do Mentors Handle It?"
+              />
+              <div class="carousel-buttons">
+                <a
+                  href="https://doi.org/10.1145/3412569.3412571"
+                  target="_blank"
+                  >DOI</a
+                >
+                <a href="publications/opensym20-balali.pdf" target="_blank"
+                  >PDF</a
+                >
+              </div>
+              <div class="carousel-caption">
+                <p class="photo-caption">OpenSym 2020 Best Paper Award</p>
+              </div>
+            </div>
+
+            <div class="carousel-item" id="carousel-item-3">
+              <img
+                src="media/research_graphics/biases.png"
+                alt="A Tale from the Trenches: Cognitive Biases and Software Development"
+              />
+              <div class="carousel-buttons">
+                <a
+                  href="https://doi.org/10.1145/3377811.3380330"
+                  target="_blank"
+                  >DOI</a
+                >
+                <a href="publications/icse20-chattopadhyay.pdf" target="_blank"
+                  >PDF</a
+                >
+              </div>
+              <div class="carousel-caption">
+                <p class="photo-caption">ICSE 2020 Distinguished Paper Award</p>
+              </div>
+            </div>
+
+            <div class="carousel-item" id="carousel-item-4">
+              <img
+                src="media/research_graphics/tradeoffs.png"
+                alt="Trade-offs in Continuous Integration: Assurance, Security, and Flexibility"
+              />
+              <div class="carousel-buttons">
+                <a
+                  href="https://doi.org/10.1145/3106237.3106270"
+                  target="_blank"
+                  >DOI</a
+                >
+                <a href="publications/esecfse17-hilton.pdf" target="_blank"
+                  >PDF</a
+                >
+              </div>
+              <div class="carousel-caption">
+                <p class="photo-caption">
+                  ESEC/FSE 2017 Distinguished Paper Award
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item" id="carousel-item-5">
+              <img
+                src="media/research_graphics/merge_conflicts.png"
+                alt="Software Practitioner Perspectives on Merge Conflicts and Resolutions"
+              />
+              <div class="carousel-buttons">
+                <a href="https://doi.org/10.1109/ICSME.2017.53" target="_blank"
+                  >DOI</a
+                >
+                <a href="publications/icsme17-mckee.pdf" target="_blank">PDF</a>
+              </div>
+              <div class="carousel-caption">
+                <p class="photo-caption">
+                  ICSME 2017 Distinguished Paper Award
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item" id="carousel-item-6">
+              <img
+                src="media/research_graphics/global_stage.png"
+                alt="Hiring in the Global Stage: Profiles of Online Contributions"
+              />
+              <div class="carousel-buttons">
+                <a href="https://doi.org/10.1109/ICGSE.2016.35" target="_blank"
+                  >DOI</a
+                >
+                <a href="publications/icgse16-sarma.pdf" target="_blank">PDF</a>
+              </div>
+              <div class="carousel-caption">
+                <p class="photo-caption">ICGSE 2016 Best Paper Award</p>
+              </div>
+            </div>
+
+            <div class="carousel-item" id="carousel-item-7">
+              <img
+                src="media/research_graphics/abundance.png"
+                alt="Foraging among an Overabundance of Similar Variants"
+              />
+              <div class="carousel-buttons">
+                <a
+                  href="https://doi.org/10.1145/2858036.2858469"
+                  target="_blank"
+                  >DOI</a
+                >
+                <a href="publications/chi16-ragavan.pdf" target="_blank">PDF</a>
+              </div>
+              <div class="carousel-caption">
+                <p class="photo-caption">CHI 2016 Best Paper Award</p>
+              </div>
+            </div>
+
+            <div class="carousel-item" id="carousel-item-8">
+              <img
+                src="media/research_graphics/artifact_analysis.png"
+                alt="End-User Programmers and their Communities: An Artifact-based Analysis"
+              />
+              <div class="carousel-buttons">
+                <a href="https://doi.org/10.1109/ESEM.2011.23" target="_blank"
+                  >DOI</a
+                >
+                <a href="pdf_link_1" target="_blank">PDF</a>
+              </div>
+              <div class="carousel-caption">
+                <p class="photo-caption">ESEM 2011 Distinguished Paper Award</p>
+              </div>
+            </div>
+
+            <!-- You can add more here- remember to update li elements -->
+          </div>
         </div>
 
-        <div class="carousel-item" id="carousel-item-2">
-          <img src="media/research_graphics/recommending_tasks.png" alt="Recommending Tasks to Newcomers in OSS Projects: How Do Mentors Handle It?">
-          <div class="carousel-buttons">
-              <a href="https://doi.org/10.1145/3412569.3412571" target="_blank">DOI</a>
-              <a href="publications/opensym20-balali.pdf" target="_blank">PDF</a>
-          </div>
-          <div class="carousel-caption">
-              <p class="photo-caption">OpenSym 2020 Best Paper Award</p>
-          </div>
-        </div>
+        <!-- External carousel control buttons -->
+        <button class="external-carousel-control" onclick="nextSlide()">
+          ❯
+        </button>
+      </div>
+    </section>
 
-        <div class="carousel-item" id="carousel-item-3">
-          <img src="media/research_graphics/biases.png" alt="A Tale from the Trenches: Cognitive Biases and Software Development">
-          <div class="carousel-buttons">
-              <a href="https://doi.org/10.1145/3377811.3380330" target="_blank">DOI</a>
-              <a href="publications/icse20-chattopadhyay.pdf" target="_blank">PDF</a>
-          </div>
-          <div class="carousel-caption">
-              <p class="photo-caption">ICSE 2020 Distinguished Paper Award</p>
-          </div>
-        </div>
+    <!-- Carousel Move Script -->
+    <script>
+      function prevSlide() {
+        $("#awardCarousel").carousel("prev");
+      }
 
-        <div class="carousel-item" id="carousel-item-4">
-          <img src="media/research_graphics/tradeoffs.png" alt="Trade-offs in Continuous Integration: Assurance, Security, and Flexibility">
-          <div class="carousel-buttons">
-              <a href="https://doi.org/10.1145/3106237.3106270" target="_blank">DOI</a>
-              <a href="publications/esecfse17-hilton.pdf" target="_blank">PDF</a>
-          </div>
-          <div class="carousel-caption">
-              <p class="photo-caption">ESEC/FSE 2017 Distinguished Paper Award</p>
-          </div>
-        </div>
+      function nextSlide() {
+        $("#awardCarousel").carousel("next");
+      }
+    </script>
 
-        <div class="carousel-item" id="carousel-item-5">
-          <img src="media/research_graphics/merge_conflicts.png" alt="Software Practitioner Perspectives on Merge Conflicts and Resolutions">
-          <div class="carousel-buttons">
-              <a href="https://doi.org/10.1109/ICSME.2017.53" target="_blank">DOI</a>
-              <a href="publications/icsme17-mckee.pdf" target="_blank">PDF</a>
-          </div>
-          <div class="carousel-caption">
-              <p class="photo-caption">ICSME 2017 Distinguished Paper Award</p>
-          </div>
-        </div>
-
-        <div class="carousel-item" id="carousel-item-6">
-          <img src="media/research_graphics/global_stage.png" alt="Hiring in the Global Stage: Profiles of Online Contributions">
-          <div class="carousel-buttons">
-              <a href="https://doi.org/10.1109/ICGSE.2016.35" target="_blank">DOI</a>
-              <a href="publications/icgse16-sarma.pdf" target="_blank">PDF</a>
-          </div>
-          <div class="carousel-caption">
-              <p class="photo-caption">ICGSE 2016 Best Paper Award</p>
-          </div>
-        </div>
-
-        <div class="carousel-item" id="carousel-item-7">
-          <img src="media/research_graphics/abundance.png" alt="Foraging among an Overabundance of Similar Variants">
-          <div class="carousel-buttons">
-              <a href="https://doi.org/10.1145/2858036.2858469" target="_blank">DOI</a>
-              <a href="publications/chi16-ragavan.pdf" target="_blank">PDF</a>
-          </div>
-          <div class="carousel-caption">
-              <p class="photo-caption">CHI 2016 Best Paper Award</p>
-          </div>
-        </div>
-
-        <div class="carousel-item" id="carousel-item-8">
-          <img src="media/research_graphics/artifact_analysis.png" alt="End-User Programmers and their Communities: An Artifact-based Analysis">
-          <div class="carousel-buttons">
-              <a href="https://doi.org/10.1109/ESEM.2011.23" target="_blank">DOI</a>
-              <a href="pdf_link_1" target="_blank">PDF</a>
-          </div>
-          <div class="carousel-caption">
-              <p class="photo-caption">ESEM 2011 Distinguished Paper Award</p>
-          </div>
-        </div>
-
-        <!-- You can add more here- remember to update li elements -->
-
+    <!-- Footer -->
+    <div class="footer">
+      <div>Copyright © Anita Sarma 2024</div>
+      <div class="contact-info">
+        <p>Kelley Engineering Center</p>
+        <p>2500 NW Monroe Ave</p>
+        <p>Corvallis, OR 97331 USA</p>
+        <p>anita.sarma@oregonstate.edu</p>
       </div>
     </div>
 
-    <!-- External carousel control buttons -->
-    <button class="external-carousel-control" onclick="nextSlide()">❯</button>
-  </div>
-</section>
-  
+    <!-- Bootstrap core JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-  <!-- Carousel Move Script -->
-  <script>
-    function prevSlide() {
-      $('#awardCarousel').carousel('prev');
-    }
-
-    function nextSlide() {
-      $('#awardCarousel').carousel('next');
-    }
-  </script>
-
-  <!-- Footer -->
-  <div class="footer">
-    <div>
-      Copyright © Anita Sarma 2024
-    </div>
-    <div class="contact-info">
-      <p>Kelley Engineering Center</p>
-      <p>2500 NW Monroe Ave</p>
-      <p>Corvallis, OR 97331 USA</p>
-      <p>anita.sarma@oregonstate.edu</p>
-    </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-  <!-- Other/Custom JavaScript -->
-  <script src="js/recentPapers.js"></script>
-
-</body>
-
+    <!-- Other/Custom JavaScript -->
+    <script src="js/recentPapers.js"></script>
+  </body>
 </html>
