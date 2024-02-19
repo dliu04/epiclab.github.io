@@ -32,6 +32,7 @@
 
   .photo {
     position: relative;
+    border: rgb(0, 0, 0) solid 1px;
     margin: 10px; /* Adjust margin between photos */
     box-sizing: border-box; /* Include padding and borders in the element's total width and height */
     width: calc(33.333% - 20px); /* Adjust width and margin between photos */
