@@ -20,7 +20,7 @@
 
 /* Banner Styles */
 .banner {
-    background-color: var(--Tapioca);
+    background-color: var(--BabyBeige);
     text-align: center;
     padding-top: 75px;
     padding-bottom: 20px;
@@ -50,7 +50,7 @@
 }
 
 .split-left {
-    background-color: var(--BabyBeige);
+    background-color: var(--LightOrange);
 }
 
 .split-middle {
@@ -115,7 +115,7 @@ h2 {
 /* Photo Carousel Styles */
 
 .featured-papers{
-    background-color: var(--SoftPink);
+    background-color: var(--BabyBeige);
 }
 
 .photo-carousel {
