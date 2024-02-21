@@ -198,14 +198,14 @@ h2 {
 }
 
 .carousel-buttons a {
-    background-color: #747373;
-    color: #ffffff;
-    border: 1px solid #747373;
+    background-color: var(--CrimsonOrange);
+    color: #ffffff !important;
+    border: 1px solid var(--DarkerOrange);
     border-radius: 5px;
     cursor: pointer;
     padding: 5px 10px;
     margin-right: 10px;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .carousel-buttons a:hover {
