@@ -12,6 +12,10 @@
     --SubtleGreen: #518f49;
 }
 
+body {
+    padding-top: 54px;
+}
+
 /* Adjusted styles for tag selection */
 .tag-selection {
     text-align: center;

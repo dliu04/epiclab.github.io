@@ -15,6 +15,10 @@
   background-color: var(--BabyBeige);
 }
 
+body {
+  padding-top: 54px;
+}
+
 .page-container {
   max-width: 1300px;
   margin: 0 auto;
