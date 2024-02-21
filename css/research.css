@@ -17,7 +17,7 @@
 
 .page-headers {
     text-align: center;
-    margin-top: 30px; /* Adjust the top margin as needed */ 
+    margin-top: 30px; 
     margin-bottom: -40px;
   }
 
@@ -25,25 +25,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px; /* Adjust margin between rows of photos */
-    padding: 40px; /* Add padding to the left and right of the container */
+    margin: 20px; 
+    padding: 40px;
   }
 
 
   .photo {
     position: relative;
-    border: rgb(0, 0, 0) solid 1px;
-    margin: 10px; /* Adjust margin between photos */
-    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
-    width: calc(33.333% - 20px); /* Adjust width and margin between photos */
-    max-width: 350px; /* Set a maximum width for the photos */
-    min-width: 300px; /* Set a minimum width for the photos */
+    border: var(--CrimsonOrange) solid 1px;
+    margin: 10px; 
+    box-sizing: border-box; 
+    width: calc(33.333% - 20px); 
+    max-width: 350px; 
+    min-width: 300px;
   }
 
   .photo img {
-    width: 100%; /* Ensure the image takes up the full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 350px; /* Set a maximum height as needed */
+    width: 100%;
+    height: auto;
+    max-height: 350px; 
     object-fit: cover;
     transition: filter 0.3s ease-in-out;
   }
@@ -94,19 +94,68 @@
     margin-top: 5px;
   }
 
+  .category-container {
+    flex-grow: 1;
+    margin: 20px;
+    max-width: calc(100%); /* Adjusted width */
+  }
+  
+  .category-container h3 {
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  .category-container .photo {
+    margin: 10px auto; 
+  }
+  
+  .category-container .photo-caption {
+    margin-top: 10px; 
+  }
+  
+  .category-container .overlay-content {
+    margin-top: 10px;
+  }
+  
+  .category-container .overlay-content a {
+    margin: 5px;
+  }
+
+  .category-container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -20px; 
+  }
+
+  
   @media screen and (max-width: 768px) {
     .photo-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; 
-      align-items: center; 
-      margin: 20px; 
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
       padding: 40px;
     }
   
     .photo {
-      width: calc(50% - 20px); 
-      margin: 10px; 
+      width: calc(50% - 20px);
+      margin: 10px;
+    }
+  
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      max-width: calc(100% - 40px); /* Adjusted to take full width */
+    }
+  
+    .category-container h3 {
+      width: 100%;
     }
   }
+  
   

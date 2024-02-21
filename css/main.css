@@ -23,9 +23,7 @@
 /* Footers */
 .footer {
     background-color: var(--CrimsonOrange);
-    /* Use the desired background color */
     color: #ffffff;
-    /* Use the desired text color */
     padding: 20px;
     text-align: left;
     margin-top: auto;
@@ -37,13 +35,9 @@
   .contact-info {
     text-align: right;
     color: #4e2a10;
-    /* Slightly darker color for the address */
     font-size: 0.9em;
-    /* Smaller font size for the address */
     margin-bottom: 5px;
-    /* Adjust the margin bottom as needed */
     line-height: 0.7;
-    /* Adjust the line-height to reduce spacing between lines */
   }
   
   .spacing {
@@ -58,6 +52,17 @@
     
     .page-content {
       background-color: var(--BabyBeige);
+    }
+
+    .footer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center text */
+    }
+  
+    .contact-info {
+      text-align: center; /* Center contact info text */
+      margin-top: 20px; /* Add some top margin for separation */
     }
     
     .spacing {
