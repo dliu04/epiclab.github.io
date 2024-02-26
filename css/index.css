@@ -115,7 +115,7 @@ h2 {
 /* Photo Carousel Styles */
 
 .featured-papers{
-    background-color: #ffcfaf; 
+    background-color: var(--BabyBeige); 
 }
 
 .photo-carousel {
