@@ -461,7 +461,11 @@
 
   <!-- Footer -->
   <div class="footer">
-    <div>Copyright© 2024 EPICLab</div>
+    <div id="copyright"></div>
+    <script>
+      var currentYear = new Date().getFullYear();
+      document.getElementById("copyright").innerHTML = "Copyright &copy; " + currentYear + " EPICLab";
+    </script>
     <div class="contact-info">
       <p>Kelley Engineering Center</p>
       <p>2500 NW Monroe Ave</p>
