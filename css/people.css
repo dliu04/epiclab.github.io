@@ -30,7 +30,6 @@ body {
   padding-right: 7%;
 }
 
-/* Optional: Add media queries for responsiveness */
 @media (max-width: 768px) {
   .page-container .page-content {
     padding-left: 5%;
@@ -45,36 +44,33 @@ body {
 }
 
 .page-container .people-container {
-  flex: 0 0 calc(33.333% - 20px); /* Adjust the width as needed, minus margin */
-  margin: 10px; /* Adjust the margin as needed */
+  flex: 0 0 calc(33.333% - 20px); 
+  margin: 10px;
   text-align: center;
 }
 
-/* Adjust order for one person */
 .page-container .curr-member-container:only-child .people-container {
-  order: -1; /* Left */
+  order: -1; 
 }
 
-/* Adjust order for two people */
 .page-container .curr-member-container:nth-child(2) .people-container:nth-child(1) {
-  order: -2; /* Left */
+  order: -2; 
 }
 
 .page-container .curr-member-container:nth-child(2) .people-container:nth-child(2) {
-  order: -1; /* Middle */
+  order: -1;
 }
 
-/* Adjust order for three people */
 .page-container .curr-member-container:nth-child(3) .people-container:nth-child(1) {
-  order: -3; /* Left */
+  order: -3;
 }
 
 .page-container .curr-member-container:nth-child(3) .people-container:nth-child(2) {
-  order: -2; /* Middle */
+  order: -2;
 }
 
 .page-container .curr-member-container:nth-child(3) .people-container:nth-child(3) {
-  order: -1; /* Right */
+  order: -1; 
 }
 
 .page-container .name-box {
@@ -144,12 +140,10 @@ body {
   float: right;
 }
 
-/* Add styles to adjust the width and spacing as needed */
 .left-column, .right-column {
   width: 50%;
 }
 
-/* Clear the float to prevent layout issues */
 .split:after {
   content: "";
   display: table;
@@ -166,8 +160,8 @@ body {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px; /* Adjust the overall padding if needed */
-  padding-left: 40px; /* Adjust the left padding as needed */
+  padding: 20px; 
+  padding-left: 40px; 
 }
 
 .split-left, .split-right {
@@ -200,9 +194,9 @@ body {
   
   .split-left,
   .split-right {
-    width: 100% !important; /* Change width to 100% for mobile devices */
-    padding: 20px !important; /* Adjust padding as needed */
-    padding-left: 40px !important; /* Adjust left padding as needed */
+    width: 100% !important;
+    padding: 20px !important;
+    padding-left: 40px !important; 
     margin-bottom: 10px !important;
   }
 }
